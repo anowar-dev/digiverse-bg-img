@@ -88,7 +88,6 @@ img{
     animation: preload 6s infinite;
     animation-timing-function: ease-in-out;
     -webkit-animation-timing-function: ease-in-out;
-    border-radius: 10rem;
     transition: all 6s;
 }
 @keyframes preload {
@@ -126,6 +125,10 @@ img{
     border-radius: 1rem;
     background: #ffffff;
     transition: .3s;
+    -webkit-animation: preload 6s infinite;
+    animation: preload 6s infinite;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
 }
 .onLoad_body .icon .dot::before{
     content: '';
@@ -327,6 +330,7 @@ img{
     background-position: center;
     background-size: cover;
     position: relative;
+    background-attachment: fixed;
 }
 .login-main_body{
     min-height: 100vh;
@@ -541,6 +545,7 @@ img{
 .footer_main .login_privacy{
     text-align: center;
     width: fit-content;
+    margin-left: -0.6rem;
 }
 .footer_main .login_privacy a{
     font-size: .7rem;
@@ -708,7 +713,7 @@ img{
 }
 .forgot_main .forgot_title{
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 2rem;
     margin-bottom: 1rem;
     color: #ffffff;
