@@ -107,7 +107,7 @@ img{
     cursor: pointer;
     display: block !important;
     position: absolute;
-    bottom: 25vh;
+    bottom: 22vh;
     left: 50%;
     transform: translate(-50%);
 }
@@ -219,7 +219,7 @@ img{
 .content .slider_main{
     width: 100%;
     max-width: 50rem;
-    margin-top: 26vh;
+    margin-top: 28vh;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -258,13 +258,13 @@ img{
 .body_main .btns a{
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: .9rem;
     font-weight: 700;
     color: #ffffff;
     transition: .3s;
 }
 .body_main .btns a:hover{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .body_main .terms a:last-child{
@@ -545,7 +545,7 @@ img{
 .footer_main .login_privacy{
     text-align: center;
     width: fit-content;
-    margin-left: 1rem;
+    margin-left: -.5rem;
 }
 .footer_main .login_privacy a{
     font-size: .7rem;
@@ -561,7 +561,7 @@ img{
     color: #ffffff;
 }
 .footer_main .login_privacy a:last-child{
-    border: unset;
+    border-color: transparent;
 }
 .login_inner form .or{
     width: 100%;
@@ -910,9 +910,6 @@ img{
     /* PreLoder */
     .onLoad .onLoad_body .logo{
         width: 16rem;
-    }
-    .onLoad_body .icon i{
-        font-size: 1.3rem !important;
     }
 
     /*------ Body --------*/
