@@ -264,7 +264,7 @@ img{
     transition: .3s;
 }
 .body_main .btns a:hover{
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .body_main .terms a:last-child{
@@ -433,7 +433,7 @@ img{
 
 .login_inner form .auth_btn{
     width: fit-content;
-    font-size: 1rem;
+    font-size: .9rem;
     font-weight: 700;
     color: #ffffff;
     border-color: transparent;
@@ -737,9 +737,9 @@ img{
     color: #ffffff;
 }
 .forgot_main form .forgot_send_btn{
-    font-size: 1rem;
+    font-size: .9rem;
     font-weight: 700;
-    line-height: 2rem;
+    line-height: 1.5rem;
     background: transparent;
     border-color: transparent;
     outline: none;
