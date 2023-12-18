@@ -605,8 +605,9 @@ img{
     transform: scale(1.2);
 }
 
-.login_inner form .google_btn img{
-    width: 2rem;
+.login_inner form .google_btn i{
+    font-size: 2rem;
+    color: #ffffff;
 }
 .login_inner form .google_btn p{
     margin-bottom: 0;
@@ -1032,6 +1033,9 @@ img{
     }
     .body_main .header_logo{
         width: 100% !important;
+    }
+    .login_inner form .google_btn i{
+    font-size: 1.8rem !important;
     }
 }
 
