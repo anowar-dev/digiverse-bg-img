@@ -585,7 +585,7 @@ img{
     font-weight: 600;
     color: #2b3d66;
 }
-.login_inner form .google_btn{
+.login_inner .google_btn{
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
@@ -601,11 +601,11 @@ img{
     transition: .3s;
     margin-top: 1rem;
 }
-.login_inner form .google_btn:hover{
+.login_inner .google_btn:hover{
     transform: scale(1.2);
 }
 
-.login_inner form .google_btn i{
+.login_inner .google_btn i{
     font-size: 2rem;
     color: #ffffff;
 }
@@ -1034,7 +1034,7 @@ img{
     .body_main .header_logo{
         width: 100% !important;
     }
-    .login_inner form .google_btn i{
+    .login_inner .google_btn i{
     font-size: 1.8rem !important;
     }
 }
