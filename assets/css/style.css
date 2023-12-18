@@ -1048,6 +1048,9 @@ img{
     .body_main .btns a{
         font-size: .9rem !important;
     }
+    .privacy_content .privacy_title{
+        font-size: 2.2rem !important;
+    }
 }
 
 
