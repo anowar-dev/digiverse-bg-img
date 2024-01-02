@@ -41,3 +41,18 @@ function cursor(e){
   mousecursor.style.top = e.pageY + 'px'
   mousecursor.style.left = e.pageX + 'px'
 }
+
+//Login Eye btn
+// $("#view_pass").click(function(){
+//   let eyeBtn = this.parentElement.
+//   console.log(eyeBtn)
+// });
+
+function viewPass() {
+  let passwords = document.getElementById("pass");
+  if (passwords.type === "password") {
+    passwords.type = "text";
+  } else {
+    passwords.type = "password";
+  }
+}
