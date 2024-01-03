@@ -35,12 +35,11 @@ setInterval(() => {
 
 
 // Cursor
-let mousecursor = document.querySelector(".cursor");
-window.addEventListener('mousemove', cursor);
-function cursor(e){
-  mousecursor.style.top = e.pageY + 'px'
-  mousecursor.style.left = e.pageX + 'px'
-}
+document.addEventListener("mousemove", (e) => {
+  const myCursor = document.querySelector(".cursor");
+  myCursor.style.left = e.pageX + "px";
+  myCursor.style.top = e.pageY + "px";
+});
 
 //Login Eye btn
 // $("#view_pass").click(function(){
