@@ -872,13 +872,13 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     max-width: 100vw;
     width: 100%;
     height: 85vh;
-    max-height: 600px;
+    max-height: 500px;
     position: relative;
+    overflow: hidden;
+    padding: 0 2rem;
+    border-top: 1px solid rgba(255, 255, 255, .2);
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
 }
-/* .about_main .about_full_width img{
-    width: 100%;
-    height: 100%;
-} */
 
 .about_title{
     font-size: 1.5rem;
@@ -890,12 +890,14 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
+    line-height: 160%;
 }
 .about_paragraph{
     font-size: .9rem;
     font-weight: 400;
     color: #ffffff;
     text-align: justify;
+    line-height: 150%;
 }
 .about_sub_title{
     font-size: 1rem;
@@ -910,182 +912,293 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     text-align: justify;
     text-transform: uppercase;
 }
-.about_para_2 a{
-    font-size: .9rem;
-    font-weight: 500;
-    color: #ffffff;
-    text-align: justify;
-    text-transform: uppercase;
-    opacity: .7;
-    transition: .3s;
-}
-.about_para_2 a:hover{
-    text-decoration: none;
-    opacity: 1;
-}
 .about_full_width .about_full_width_inner{
     position: relative;
-    /* background: rgba(0, 0,
-     0, .7); */
     width: 100%;
     height: 100%;
-    border-top: 1px solid rgba(255, 255, 255, .2);
-    border-bottom: 1px solid rgba(255, 255, 255, .2);
 }
 .about_full_width_inner .about_full_content{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    max-width: 767px;
-    padding: 1.5rem;
-    transform: translate(-50%, -50%);
-    max-height: 100%;
-    overflow-y: auto;
+   text-align: center;
 }
-.about_dabble_section .adout_dubble_row{
-    height: 500px;
+.about_full_content .about_title{
+    padding-top: 3rem;
+}
+.about_full_content .about_full_content{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    column-gap: 2%;
+}
+.about_full_content .about_text_div{
+    width: 49%;
+    padding-left: 3rem;
+}
+.about_text_div .about_paragraph{
+    width: 100%;
+    max-width: 480px;
+    margin-left: auto;
+}
+.about_full_content .about_img_div{
+    width: 49%;
+    height: 100%;
+}
+
+.about_full_width_inner .ai_content{
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5rem;
+}
+.ai_content .about_full_content_ai{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    column-gap: 2rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
-.adout_dubble_row .about_left_div{
-    width: 50%;
-    height: 100%;
-    border-right: 1px solid rgba(255, 255, 255, .5);
-    overflow: hidden;
-}
-.about_dabble_section .adout_dubble_row:last-child{
-    border-bottom: unset;
-}
-/* .adout_dubble_row .about_left_div.mission{
-    background: url('../img/about/mission.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-} */
-.adout_dubble_row .about_right_div{
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-}
-.adout_dubble_row .about_left_div.vission{
-    background: url('../img/about/vision2.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-} 
-.about_right_div .about_right_relative{
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-.about_right_relative .about_right_inner{
-    position: absolute;
-    width: 100%;
-    max-width: 480px;
-    max-height: 100%;
-    overflow-y: auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0 auto;
-    padding: 1.5rem;
-}
-.about_left_div .about_left_relative{
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-.about_left_relative .about_left_inner{
-    position: absolute;
-    width: 100%;
-    max-width: 480px;
-    max-height: 100%;
-    overflow-y: auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0 auto;
-    padding: 1.5rem;
-}
-/* .adout_dubble_row .about_left_div.leadership{
-    background: url('../img/about/leaderahip.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-} */
-/* .adout_dubble_row .about_right_div.goal{
-    background: url('../img/about/goal.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-} */
-.adout_dubble_row .about_left_div.tech{
-    background: url('../img/about/tech2.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-}
-.adout_dubble_row .about_left_div.innovation{
-    background: url('../img/about/innovation2.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-}
-.adout_dubble_row .about_right_div.privacy{
-    background: url('../img/about/privacyupdate.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.adout_dubble_row .about_right_div.patient{
-    background: url('../img/about/patient.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.adout_dubble_row .about_right_div.win{
-    background: url('../img/about/win.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.about_left_inner a{
-    font-style: .9rem;
-    color: #ffffff;
-    transition: .3s;
-    text-decoration: none;
-    text-align: left;
-    display: block;
-}
-.about_left_inner a:hover{
-    font-style: 1rem;
-    text-decoration: underline;
-}
-.about_para_list{
-    margin: 0;
-    
-}
-.about_para_list li{
-    list-style: none;
-    position: relative;
+.about_full_content_ai .about_text_div_ai ul{
+    padding-left: 0;
     margin-left: 0;
 }
-.about_para_list li::before{
-    content: '_';
+.about_text_div_ai ul li .about_paragraph{
+    margin-bottom: 0;
+}
+.ai_content .about_title{
+    text-align: center;
+}
+.about_full_width_inner .content_4th{
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    column-gap: 1%;
+    padding-top: 5rem;
+}
+.content_4th .text_div_4th{
+    width: 54%;
+}
+.content_4th .text_div_4th .about_title{
+   text-align: center;
+}
+.content_4th .text_div_4th ul li .about_paragraph{
+   margin-bottom: 0;
+}
+.content_4th .text_div_4th .link_ath{
+   font-size: 1.2rem;
+   font-weight: 500;
+   color: #ffffff;
+   text-transform: uppercase;
+   text-decoration: none;
+   transition: .3s;
+}
+.content_4th .text_div_4th .link_ath:hover{
+    opacity: .5;
+}
+.content_4th .img_div_4th{
+    width: 45%;
+    margin-top: 1rem;
+}
+.about_full_width_inner .aboutcontentList li{
+    position: relative;
+    list-style: none;
+}
+.about_full_width_inner .aboutcontentList li::before{
     position: absolute;
-    top: -7px;
-    left: -1.5rem;
+    top: -.4rem;
+    left: -1rem;
+    content: '_';
     color: #ffffff;
     font-weight: 700;
-    margin-right: 1rem;
+}
+.about_full_width_inner .content_values{
+    text-align: center;
+    padding-top: 10rem;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.about_full_width_inner .content_values p{
+    text-align: center;
+}
+/* Dubble row */
+.about_dabble_section .about_dabble_section_inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 500px;
+}
+.about_dabble_section_inner .about_left{
+    width: 50%;
+    height: 100%;
+    border-right: 1px solid rgba(255, 255, 255, .2);
+    position: relative;
+}
+.about_dabble_section_inner .about_right{
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+.about_left .about_tech_content{
+    padding-top: 10rem;
+    width: 90%;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.about_tech_content .about_tech_inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.about_right .about_innovation_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10rem;
+    width: 90%;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    column-gap: 1rem;
+}
+.innvation_text .about_paragraph{
+    text-align: left;
+}
+.innvation_text .about_title{
+    text-align: left;
+    margin-left: 0;
+}
+.about_dabble_section_inner.inner2{
+    border-top: 1px solid rgba(255, 255, 255, .5);
+}
+.about_privacy_content .about_privacy_inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10rem;
+    width: 90%;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.privacy_inner_text .about_title{
+    margin-left: 0;
+}
+.privacy_inner_text .about_paragraph{
+    text-align: left;
+}
+.about_right .about_patient_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 10rem;
+    width: 90%;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.patient_text .about_paragraph{
+    text-align: left;
+}
+.patient_text .about_title{
+    margin-left: 0;
+}
+.patient_img img{
+    width: 200px;
+}
+.about_win_content .about_win_inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 10rem;
+    width: 90%;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.win_inner_text .about_title{
+    margin-left: 0;
+}
+.win_inner_text .about_paragraph{
+    text-align: left;
 }
 
+/* Full width bottom */
+.about_full_width_bottom{
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, .2);
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+.about_full_width_inner .full_width_bottom{
+    width: 90%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.full_width_bottom .full_width_bottom_inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    column-gap: 8%;
+    margin-top: 3rem;
+    padding-left: 1rem;
+}
+.full_width_bottom_inner .full_b_left{
+    width: 46%;
+    height: 100%;
+}
+.full_width_bottom_inner .full_b_right{
+    width: 46%;
+    height: 100%;
+}
+.full_width_bottom_inner .b_single_inner{
+    text-align: left;
+    margin-bottom: 3rem;
+}
+.b_single_inner .service_title{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+.b_single_inner .service_list{
+    margin-left: 0;
+    padding-left: 0;
+    list-style: disc;
+    color: #ffffff;
+}
+.b_single_inner .service_list li .service_content{
+    font-size: 17px;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 150%;
+    text-align: justify;
+    margin-bottom: .2rem;
+}
+.b_single_inner .bottom_finished{
+    font-size: .7rem;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 140%;
+    margin-top: 3rem;
+}
+.b_single_inner .bottom_finished a{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    opacity: .6;
+    transition: .3s;
+}
+.b_single_inner .bottom_finished a:hover{
+    opacity: 1;
+}
 /*========== Start Responsive ===========*/
 /*------- max-width: 1400px  --------*/
 
@@ -1124,6 +1237,10 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
         width: 11rem !important;
     }
 
+    /* max-width: 992px for about page */
+    .about_full_content .about_text_div{
+        padding-left: unset;
+    }
 }
 
 
@@ -1177,26 +1294,98 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     }
 
     /* 768px for Apout Page */ 
-    .about_dabble_section .adout_dubble_row{
+    .about_dabble_section .about_dabble_section_inner{
         flex-direction: column;
+        height: fit-content;
     }
-    .adout_dubble_row .about_left_div{
-        width: 100%;
-        height: 800px;
-    }
-    .adout_dubble_row .about_right_div{
-        width: 100%;
-        height: 800px;
-    }
-    .about_dabble_section .adout_dubble_row{
-        border: unset;
-    }
-    .adout_dubble_row .about_left_div{
-        border-top: 1px solid rgba(255, 255, 255, 1);
-        border-bottom: 1px solid rgba(255, 255, 255, 1);
+    .about_dabble_section_inner .about_left {
         border-right: unset;
     }
-
+    .about_dabble_section_inner .about_left{
+        border-block-start: 1px solid rgba(255, 255, 255, .2);
+        width: 100%;
+    }
+    .about_left .about_tech_content{
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    .about_dabble_section_inner .about_right{
+        width: 100%;
+        border-top: 1px solid rgba(255, 255, 255, .2);
+    }
+    .about_right .about_innovation_content{
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+    .about_right .about_innovation_content{
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+    .about_privacy_content .about_privacy_inner{
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+    .about_right .about_patient_content{
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+    .about_win_content .about_win_inner{
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+    .about_full_content .about_full_content{
+        flex-direction: column;
+    }
+    .about_full_content .about_text_div{
+        width: 100%;
+    }
+    .about_text_div .about_paragraph{
+        margin-right: auto;
+    }
+    .about_full_content .about_img_div{
+        width: 100%;
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2rem;
+    }
+    .about_full_content .about_title{
+        padding-top: 2.5rem;
+    }
+    .about_main .about_full_width{
+        max-height: unset;
+        height: fit-content;
+    }
+    .about_full_width_inner .ai_content{
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+    .about_full_width_inner .content_4th{
+        flex-direction: column;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+    .content_4th .text_div_4th{
+        width: 100%;
+    }
+    .content_4th .img_div_4th{
+        width: 100%;
+        margin-top: 2rem;
+        text-align: center;
+    }
+    .about_full_width_inner .content_values{
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+    .full_width_bottom .full_width_bottom_inner{
+        flex-direction: column;
+    }
+    .full_width_bottom_inner .full_b_right{
+        width: 100%;
+    }
+    .full_width_bottom_inner .full_b_left{
+        width: 100%;
+    }
 }
 
 /*----------- max-width: 576px -------------*/
@@ -1291,8 +1480,8 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     }
 
     /* About Page for 576px*/
-    .about_main .about_full_width{
-        max-height: 500px;
+    .about_full_width_inner .about_full_content{
+        padding: 0;
     }
     .about_title {
         font-size: 1.2rem;
@@ -1303,20 +1492,24 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     .about_paragraph{
         font-size: .8rem;
     }
-    .about_para_2{
-        font-size: .8rem;
+    .b_single_inner .service_title{
+        font-size: 1rem;
     }
-    .about_para_2 a{
-        font-size: .8rem;
+    .b_single_inner .service_list li .service_content{
+        font-size: .9rem;
     }
-    .about_full_width_inner .about_full_content {
-        padding: 1em;
+    .b_single_inner .bottom_finished{
+        font-size: .7rem;
     }
-    .about_left_relative .about_left_inner{
-        padding: 1rem;
+    .about_main .about_full_width{
+        padding: 0 1rem;
     }
-    .about_right_relative .about_right_inner{
-        padding: 1rem;
+    .ai_content .about_full_content_ai{
+        column-gap: .2rem;
+        padding-left: 1rem;
+    }
+    .text_div_4th .aboutcontentList{
+        padding-left: 1rem;
     }
 }
 
