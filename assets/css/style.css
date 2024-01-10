@@ -1163,6 +1163,10 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     max-width: 1024px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: -10rem;
+}
+.services_full_width_inner .full_width_bottom .about_paragraph{
+    text-align: center;
 }
 .full_width_bottom .full_width_bottom_inner{
     display: flex;
@@ -1170,7 +1174,6 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     align-items: flex-start;
     column-gap: 8%;
     margin-top: 3rem;
-    padding-left: 1rem;
 }
 .full_width_bottom_inner .full_b_left{
     width: 46%;
@@ -1181,15 +1184,21 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     height: 100%;
 }
 .full_width_bottom_inner .b_single_inner{
-    text-align: left;
+    text-align: center;
     margin-bottom: 3rem;
+    padding-left: 1rem;
+    width: 90%;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20rem;
 }
 .b_single_inner .service_title{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: #ffffff;
     text-align: left;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 .b_single_inner .service_list{
     margin-left: 0;
@@ -1202,7 +1211,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     font-weight: 500;
     color: #ffffff;
     line-height: 150%;
-    text-align: justify;
+    text-align: left;
     margin-bottom: .2rem;
 }
 .b_single_inner .bottom_finished{
@@ -1211,6 +1220,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     color: #ffffff;
     line-height: 140%;
     margin-top: 3rem;
+    text-align: left;
 }
 .b_single_inner .bottom_finished a{
     text-decoration: none;
@@ -1221,6 +1231,18 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 }
 .b_single_inner .bottom_finished a:hover{
     opacity: 1;
+}
+.about_service_bottom .full_width_bottom_inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15rem;
+}
+.about_service_bottom{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: rem;
 }
 /*========== Start Responsive ===========*/
 /*------- max-width: 1400px  --------*/
