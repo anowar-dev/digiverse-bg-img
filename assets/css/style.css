@@ -32,20 +32,15 @@ img{
     height: 20px;
     position: absolute;
     left: 0;
+    background: url('../img/logo/wmudn.png');
     top: 0;
-    overflow: hidden;
+    background-size: cover;
     z-index: 99999999999;
     pointer-events: none;
-    display: none;
+    display: none !important;
 }
 body:not(a):not(button):not(input):not(textarea):not(select) .cursor{
     display: block;
-}
-.cursor img{
-    z-index: 9999999999;
-    width: 100%;
-    border: 1px solid rgba(255, 255, 255, 1);
-    height: 100%;
 }
 
 /*========== Global CSS Start ===========*/
@@ -1208,10 +1203,10 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     color: #ffffff;
 }
 .b_single_inner .service_list li .service_content{
-    font-size: 17px;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 400;
     color: #ffffff;
-    line-height: 150%;
+    line-height: 200%;
     text-align: left;
     margin-bottom: .2rem;
 }
@@ -1233,17 +1228,13 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 .b_single_inner .bottom_finished a:hover{
     opacity: 1;
 }
-.about_service_bottom .full_width_bottom_inner{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+
+
+.full_width_bottom_inner .full_bottom_inner_content{
+    display: grid;
+    grid-template-columns: auto auto;
     margin-bottom: 15rem;
-}
-.about_service_bottom{
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: rem;
 }
 /*========== Start Responsive ===========*/
 /*------- max-width: 1400px  --------*/
