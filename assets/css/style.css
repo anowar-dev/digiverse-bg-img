@@ -897,7 +897,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     font-weight: 400;
     color: #ffffff;
     text-align: justify;
-    line-height: 150%;
+    line-height: 180%;
 }
 .about_sub_title{
     font-size: 1rem;
@@ -1037,10 +1037,11 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
    text-transform: uppercase;
    text-decoration: none;
    transition: .3s;
-   opacity: .5;
+   margin-left: 30px;
+   margin-top: 2rem;
 }
 .content_4th .text_div_4th .link_ath:hover{
-    opacity: 1;
+    opacity: .6;
 }
 .aboutcontentList li{
     position: relative;
@@ -1068,7 +1069,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     max-width: 1024px;
 } 
 .content_values .about_paragraph{
-    text-align: center;
+    text-align: justify;
 }
 /* Dubble row */
 .about_dabble_section .about_dabble_section_inner{
@@ -1094,13 +1095,21 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     margin-left: auto;
     margin-right: auto;
 }
+.about_tech_content .about_title{
+    width: 100%;
+    text-align: right;
+    padding-right: 106px;
+}
+.tech_inner_img img{
+    width: 200px;
+}
 .about_tech_content .about_tech_inner{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-end;
+    align-items: flex-start;
 }
 .about_tech_inner .tech_inner_text .about_paragraph{
-    text-align: center;
+    text-align: right;
 }
 .about_right .about_innovation_content{
     padding-top: 10rem;
@@ -1114,8 +1123,16 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     justify-content: center;
     align-items: flex-start;
 }
+.about_innovation_content .about_title{
+    width: 100%;
+    text-align: left;
+    padding-left: 100px;
+}
 .innvation_text .about_paragraph{
     text-align: left;
+}
+.innvation_img img{
+    width: 200px;
 }
 .innvation_text .about_title{
     text-align: left;
@@ -1131,14 +1148,22 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 
 .about_privacy_content .about_privacy_inner{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-end;
+    align-items: flex-start;
 }
 .privacy_inner_text .about_title{
     margin-left: 0;
 }
 .privacy_inner_text .about_paragraph{
-    text-align: left;
+    text-align: right;
+}
+.about_privacy_content .about_title{
+    width: 100%;
+    text-align: right;
+    padding-right: 106px;
+}
+.privacy_inner_img img{
+    width: 200px;
 }
 .about_right .about_patient_content{
     padding-top: 10rem;
@@ -1161,21 +1186,32 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 .patient_img img{
     width: 200px;
 }
-.about_win_content .about_win_inner{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+.about_left .about_win_content{
     padding-top: 10rem;
     width: 90%;
     max-width: 480px;
     margin-left: auto;
     margin-right: auto;
 }
+
+.about_win_content .about_win_inner{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
 .win_inner_text .about_title{
     margin-left: 0;
 }
 .win_inner_text .about_paragraph{
-    text-align: left;
+    text-align: right;
+}
+.win_inner_img img{
+    width: 200px;
+}
+.about_win_content .about_title{
+    width: 100%;
+    text-align: right;
+    padding-right: 107px;
 }
 
 /* Full width bottom */
@@ -1192,7 +1228,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     margin-bottom: -10rem;
 }
 .services_full_width_inner .full_width_bottom .about_paragraph{
-    text-align: center;
+    text-align: justify;
 }
 .full_width_bottom .full_width_bottom_inner{
     display: flex;
