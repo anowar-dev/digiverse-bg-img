@@ -1199,6 +1199,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     color: #ffffff;
     text-align: left;
     margin-bottom: 2rem;
+    text-transform: uppercase;
 }
 .b_single_inner .service_list{
     margin-left: 0;
