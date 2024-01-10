@@ -851,7 +851,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 .about_section{
     width: 100vw;
     max-width: 100%;
-    margin: 2.5rem 0;
+    margin: 0 0 2.5rem 0;
 
 }
 .bgdurkabout{
@@ -868,6 +868,14 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     width: 100%;
     height: 85vh;
     max-height: 600px;
+    position: relative;
+    overflow: hidden;
+}
+.about_main .about_full_width.top{
+    max-width: 100vw;
+    width: 100%;
+    height: 95vh;
+    max-height: 800px;
     position: relative;
     overflow: hidden;
 }
@@ -897,12 +905,29 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     color: #ffffff;
     text-align: justify;
 }
+.about_full_width .about_full_width_inner_top{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
 .about_full_width .about_full_width_inner{
     position: relative;
     width: 100%;
     height: 100%;
 }
 .about_full_width .about_full_width_inner img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.about_full_width_inner_top .header_logo{
+    margin-top: 0;
+    padding-top: 2rem;
+}
+.about_full_width .about_full_width_inner_top .top_bg_img{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -1077,7 +1102,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 .about_tech_inner .tech_inner_text .about_paragraph{
     text-align: center;
 }
-.about_right .about_innovation_content{
+.about_right .about_innovation_content_inner{
     display: flex;
     justify-content: space-between;
     align-items: center;
