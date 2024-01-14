@@ -13,6 +13,7 @@ body{
     background-attachment: fixed;
     min-height: 100vh;
     position: relative;
+    cursor: none;
 }
 ::placeholder{
     color: #ffffff;
@@ -31,17 +32,13 @@ img{
     width: 20px;
     height: 20px;
     position: absolute;
-    left: 0;
     background: url('../img/logo/wmudn.png');
-    top: 0;
     background-size: cover;
-    z-index: 99999999999;
+    z-index: 999999999999999999;
     pointer-events: none;
-    display: none !important;
 }
-body:not(a):not(button):not(input):not(textarea):not(select) .cursor{
-    display: block;
-}
+
+
 
 /*========== Global CSS Start ===========*/
 .container{
@@ -103,20 +100,20 @@ body:not(a):not(button):not(input):not(textarea):not(select) .cursor{
 .onLoad_body .icon{
     text-align: center;
     cursor: pointer;
-    display: block !important;
+    display: block;
     position: absolute;
     bottom: 22vh;
     left: 50%;
     transform: translate(-50%);
 }
 .onLoad_body .icon .dot{
-    cursor: pointer;
     transition-duration: 1s;
     border: 1px solid #ffffff;
     width: 1.4rem;
     height: 3rem;
     margin-top: 5rem;
     position: absolute;
+    cursor: pointer;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -139,6 +136,7 @@ body:not(a):not(button):not(input):not(textarea):not(select) .cursor{
     left: 50%;
     transform: translate(-50%, 0);
     animation: scrolldown 2s infinite;
+    cursor: pointer;
 }
 @keyframes scrolldown {
     0%{
@@ -980,17 +978,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 .about_text_div_ai .aboutcontentList{
     padding-left: 1rem;
 }
-.about_text_div_ai ul li{
-    position: relative;
-}
-.about_text_div_ai ul li::before{
-    position: absolute;
-    content: '_';
-    top: -.4rem;
-    left: -1rem;
-    color: #ffffff;
-    font-weight: 700;
-}
+
 .about_text_div_ai ul li .about_paragraph{
     margin-bottom: 0;
 }
@@ -1043,17 +1031,11 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     opacity: .6;
 }
 .aboutcontentList li{
-    position: relative;
-    list-style: none;
-}
-.aboutcontentList li::before{
-    position: absolute;
-    top: -.4rem;
-    left: -1rem;
-    content: '_';
+    list-style: disc;
     color: #ffffff;
     font-weight: 700;
 }
+
 .about_full_width .value_full_width_inner{
     width: 100%;
     height: 100%;
@@ -1600,6 +1582,12 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     }
     .text_div_4th .aboutcontentList{
         padding-left: 1rem;
+    }
+    .ai_full_width_inner .about_bg_full_small{
+        min-height: 370px;
+    }
+    .indu_full_width_inner .about_bg_full_small{
+        min-height: 370px;
     }
 }
 

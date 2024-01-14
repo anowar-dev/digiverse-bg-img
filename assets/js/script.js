@@ -35,18 +35,66 @@ setInterval(() => {
 
 
 // Cursor
-document.addEventListener("mousemove", (e) => {
-  const myCursor = document.querySelector(".cursor");
-  myCursor.style.left = e.pageX + "px";
-  myCursor.style.top = e.pageY + "px";
+
+$(document).ready(function () {
+  const cursor = $(".cursor");
+
+  $(document).mousemove(function (e) {
+    cursor.css({
+      left: e.pageX + "px",
+      top: e.pageY + "px"
+    });
+
+    
+
+    cursor.css("display", "block");
+
+    const isOverInteractiveElement = $("a, button, input, textarea, select")
+      .toArray()
+      .some(function (element) {
+        const rect = element.getBoundingClientRect();
+        return (
+          e.pageX >= rect.left &&
+          e.pageX <= rect.right &&
+          e.pageY >= rect.top &&
+          e.pageY <= rect.bottom
+        );
+      });
+
+    const isOverIconElement = $(".onLoad_body .icon, .onLoad_body .icon .dot")
+      .toArray()
+      .some(function (element) {
+        const rect = element.getBoundingClientRect();
+        return (
+          e.pageX >= rect.left &&
+          e.pageX <= rect.right &&
+          e.pageY >= rect.top &&
+          e.pageY <= rect.bottom
+        );
+      });
+
+    if (isOverInteractiveElement || isOverIconElement) {
+      cursor.css("display", "none");
+    } else if (isOverScrollbar) {
+      cursor.css("display", "block");
+    } else {
+      cursor.css("display", "block");
+    }
+  });
+
+  $(document).mouseover(function () {
+    cursor.css("display", "block");
+  });
+
+  $(document).mouseout(function () {
+    cursor.css("display", "none");
+  });
 });
 
-//Login Eye btn
-// $("#view_pass").click(function(){
-//   let eyeBtn = this.parentElement.
-//   console.log(eyeBtn)
-// });
+ 
 
+
+// Pass word vissible
 function viewPass() {
   let passwords = document.getElementById("pass");
   if (passwords.type === "password") {
