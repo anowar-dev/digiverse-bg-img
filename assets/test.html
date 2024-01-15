@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Cursor</title>
+  <style>
+    body {
+      /* cursor: none; */
+      margin: 0;
+    }
+
+    .custom-cursor {
+      position: fixed;
+      width: 40px;
+      height: 40px;
+      background-image: url('data:image/jpeg;base64,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'); /* Replace with your image path */
+      background-size: cover;
+      pointer-events: none;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Your content goes here -->
+  <h1>Hello, this is a custom cursor example!</h1>
+  <div style="width: 100%; height: 100vh;"> <!-- Add some content for scrolling -->
+    <p>Scroll to the right to see the custom cursor without causing horizontal scrollbar.</p>
+
+    <a href="#">this is link</a>
+  </div>
+
+  <!-- Custom cursor element -->
+  <div class="custom-cursor"></div>
+
+  <script>
+    const cursor = document.querySelector('.custom-cursor');
+    document.addEventListener('mousemove', (e) => {
+      
+      
+      // Calculate the cursor position taking into account the scroll position
+      const adjustedX = e.pageX - cursor.clientWidth / 2;
+      const adjustedY = e.pageY - cursor.clientHeight / 2;
+
+      cursor.style.top = `${Math.min(window.innerHeight - cursor.clientHeight, Math.max(0, adjustedY))}px`;
+      cursor.style.left = `${Math.min(window.innerWidth - cursor.clientWidth, Math.max(0, adjustedX))}px`;
+
+      if (
+        e.pageX >= 0 &&
+        e.pageX <= window.innerWidth &&
+        e.pageY >= 0 &&
+        e.pageY <= window.innerHeight
+      ) {
+        cursor.style.display = 'block';
+      }
+       else {
+        cursor.style.display = 'none';
+      }
+    });
+    document.addEventListener('mouseout', () => {
+      cursor.style.display = 'none';
+    });
+    
+  </script>
+
+</body>
+</html>

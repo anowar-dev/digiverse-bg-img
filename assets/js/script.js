@@ -42,12 +42,8 @@ $(document).ready(function () {
   $(document).mousemove(function (e) {
     cursor.css({
       left: e.pageX + "px",
-      top: e.pageY + "px"
+      top: e.pageY + "px",
     });
-
-    
-
-    cursor.css("display", "block");
 
     const isOverInteractiveElement = $("a, button, input, textarea, select")
       .toArray()
@@ -75,15 +71,9 @@ $(document).ready(function () {
 
     if (isOverInteractiveElement || isOverIconElement) {
       cursor.css("display", "none");
-    } else if (isOverScrollbar) {
-      cursor.css("display", "block");
     } else {
       cursor.css("display", "block");
     }
-  });
-
-  $(document).mouseover(function () {
-    cursor.css("display", "block");
   });
 
   $(document).mouseout(function () {
@@ -91,7 +81,37 @@ $(document).ready(function () {
   });
 });
 
- 
+// const cursor = document.querySelector(".cursor");
+// document.addEventListener("mousemove", (e) => {
+//   // Calculate the cursor position taking into account the scroll position
+//   const adjustedX = e.pageX - cursor.clientWidth / 2;
+//   const adjustedY = e.pageY - cursor.clientHeight / 2;
+
+//   cursor.style.top = `${Math.min(
+//     window.innerHeight - cursor.clientHeight,
+//     Math.max(0, adjustedY)
+//   )}px`;
+//   cursor.style.left = `${Math.min(
+//     window.innerWidth - cursor.clientWidth,
+//     Math.max(0, adjustedX)
+//   )}px`;
+
+//   if (
+//     e.pageX >= 0 &&
+//     e.pageX <= window.innerWidth &&
+//     e.pageY >= 0 &&
+//     e.pageY <= window.innerHeight
+//   ) {
+//     cursor.style.display = "block";
+//   } else {
+//     cursor.style.display = "none";
+//   }
+// });
+// document.addEventListener("mouseout", () => {
+//   cursor.style.display = "none";
+// });
+
+
 
 
 // Pass word vissible

@@ -29,14 +29,15 @@ img{
     max-width: 100%;
 }
 .cursor{
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     position: absolute;
-    background: url('../img/logo/wmudn.png');
+    background: url(../img/logo/Mouse\ \(1\).png);
     background-size: cover;
     z-index: 999999999999999999;
     pointer-events: none;
 }
+
 
 
 
