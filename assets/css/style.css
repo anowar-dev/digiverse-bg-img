@@ -183,6 +183,11 @@ img{
     z-index: 1;
     /* box-shadow: 0 0 2px 0 rgb(1, 1, 79); */
 }
+.header_logo .home_page_logo{
+    height: fit-content;
+    position: relative;
+    z-index: 1;
+}
 
 .body_main .header_logo{
     /* background: #ebf7fb; */
@@ -193,6 +198,7 @@ img{
     text-align: center;
     padding: 0.3rem 0;
     background: transparent;
+    height: fit-content;
 }
 .body_main .header_logo .home_page_logo img{
     max-width: 12rem;
@@ -200,6 +206,7 @@ img{
 }
 .header_logo a img{
     max-width: 100%;
+    height: auto;
 }
 
 .slider_main .slider_box{

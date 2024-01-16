@@ -31,26 +31,43 @@ setInterval(() => {
   }
 }, 4000);
 
-// Cursor
 
+
+// ===========Custom Cursor start here =============
 $(document).ready(function () {
   const cursor = $(".cursor");
 
-  $(document).mousemove(function (e) {
-    cursor.css({
-      left: e.pageX + "px",
-      top: e.pageY + "px",
-    });
+  function updateScrollbar() {
+    const documentHeight = $(document).height();
+    const viewportHeight = $(window).height();
+    const documentWidth = $(document).width();
+    const viewportWidth = $(window).width();
 
+    // Check if the document height is greater than the viewport height
+    if (documentHeight > viewportHeight) {
+      $("body").css("overflow-y", "auto");
+    } else {
+      $("body").css("overflow-y", "hidden");
+    }
+
+    // Check if the document width is greater than the viewport width
+    if (documentWidth > viewportWidth) {
+      $("body").css("overflow-x", "auto");
+    } else {
+      $("body").css("overflow-x", "hidden");
+    }
+  }
+
+  function updateCursorVisibility(e) {
     const isOverInteractiveElement = $("a, button, input, textarea, select")
       .toArray()
       .some(function (element) {
         const rect = element.getBoundingClientRect();
         return (
-          e.pageX >= rect.left &&
-          e.pageX <= rect.right &&
-          e.pageY >= rect.top &&
-          e.pageY <= rect.bottom
+          e.clientX >= rect.left &&
+          e.clientX <= rect.right &&
+          e.clientY >= rect.top &&
+          e.clientY <= rect.bottom
         );
       });
 
@@ -59,10 +76,10 @@ $(document).ready(function () {
       .some(function (element) {
         const rect = element.getBoundingClientRect();
         return (
-          e.pageX >= rect.left &&
-          e.pageX <= rect.right &&
-          e.pageY >= rect.top &&
-          e.pageY <= rect.bottom
+          e.clientX >= rect.left &&
+          e.clientX <= rect.right &&
+          e.clientY >= rect.top &&
+          e.clientY <= rect.bottom
         );
       });
 
@@ -71,51 +88,44 @@ $(document).ready(function () {
     } else {
       cursor.css("display", "block");
     }
+  }
+
+  // Initial update when the page loads
+  updateScrollbar();
+
+  $(document).mousemove(function (e) {
+    const scrollX = window.pageXOffset || document.documentElement.scrollLeft;
+    const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+
+    cursor.css({
+      left: e.clientX + scrollX + "px",
+      top: e.clientY + scrollY + "px",
+    });
+
+    updateCursorVisibility(e);
+  });
+
+  $(document).scroll(function () {
+    updateCursorVisibility(); // Update cursor visibility on scroll
+    updateScrollbar(); // Update scrollbar on scroll
   });
 
   $(document).mouseout(function () {
     cursor.css("display", "none");
   });
+
+  // Update scrollbar and cursor visibility on window resize
+  $(window).resize(function () {
+    updateCursorVisibility();
+    updateScrollbar();
+  });
 });
+//=============== Custom Cursor end here ==========
 
-// const cursor = document.querySelector(".cursor");
-// document.addEventListener("mousemove", (e) => {
-//   const adjustedX = e.pageX - cursor.clientWidth / 2;
-//   const adjustedY = e.pageY - cursor.clientHeight / 2;
 
-//   const maxX = window.innerWidth - cursor.clientWidth;
-//   const maxY = window.innerHeight - cursor.clientHeight;
 
-//   const clampedX = Math.min(maxX, Math.max(0, adjustedX));
-//   const clampedY = Math.min(maxY, Math.max(0, adjustedY));
 
-//   cursor.style.top = `${clampedY}px`;
-//   cursor.style.left = `${clampedX}px`;
 
-//   if (
-//     e.pageX >= 0 &&
-//     e.pageX <= window.innerWidth &&
-//     e.pageY >= 0 &&
-//     e.pageY <= window.innerHeight
-//   ) {
-//     cursor.style.display = "block";
-
-//     // Check if cursor is close to the right edge
-//     const scrollbarWidth =
-//       window.innerWidth - document.documentElement.clientWidth;
-//     if (e.pageX > window.innerWidth - scrollbarWidth - 10) {
-//       cursor.style.display = "none";
-//     } else {
-//       cursor.style.display = "block"; // Ensure the cursor is displayed when not close to the right edge
-//     }
-//   } else {
-//     cursor.style.display = "none";
-//   }
-// });
-
-// document.addEventListener("mouseout", () => {
-//   cursor.style.display = "none";
-// });
 
 // Pass word vissible
 function viewPass() {
