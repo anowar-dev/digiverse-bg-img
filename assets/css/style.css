@@ -29,13 +29,12 @@ img{
     max-width: 100%;
 }
 .cursor{
-    width: 40px;
-    height: 40px;
+    width: 22px;
+    height: 22px;
     position: absolute;
-    background: url(../img/logo/Mouse\ \(1\).png);
-    background-size: cover;
     z-index: 999999999999999999;
     pointer-events: none;
+    transform: translate(-20%, -30%);
 }
 
 
