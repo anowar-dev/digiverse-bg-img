@@ -3,7 +3,7 @@
 var okbtn = document.querySelector(".onLoad_body .icon");
 var onLoadMain = document.querySelector(".onLoad");
 var stopprelod = document.querySelector(".onLoad_body");
-console.log(stopprelod);
+
 $(window).on("load", function () {
   setTimeout(function () {
     stopprelod.classList.add("onLoad_disable");
@@ -136,3 +136,11 @@ function viewPass() {
     passwords.type = "password";
   }
 }
+
+
+// Chatboot
+$(document).ready(function(){
+  $(".chat_bot_button").on("click", function(){
+    $(".chat_bot_body").toggle("display_block");
+  });
+})

@@ -64,11 +64,13 @@
                             <div class="form_inner_div">
                                 <label for="pass"><i class="fa-solid fa-lock"></i></label>
                                 <input type="password" name="pass" id="pass" placeholder="Enter Password" required>
+                                <button class="bg-transparent border-0"><i id="view_pass" class="fa-solid fa-eye" onclick="viewPass()"></i></button>
                                 <span class="require_mark">*</span>
                             </div>
                             <div class="form_inner_div">
                                 <label for="conPass"><i class="fa-solid fa-lock"></i></label>
                                 <input type="password" name="conPass" id="conPass" placeholder="Enter Confirm Password" required>
+                                <button class="bg-transparent border-0"><i id="view_pass" class="fa-solid fa-eye" onclick="viewPass()"></i></button>
                                 <span class="require_mark">*</span>
                             </div>
                             <div class="form_inner_div">
@@ -80,6 +82,7 @@
                             <div class="form_inner_div">
                                 <label for="nid"><i class="fa-solid fa-id-badge"></i></label>
                                 <input type="date" class="empty" max="2020-06-03" name="nid" id="nid" placeholder="Enter Your Date of Birth(DOB)" required>
+                                <span class="require_mark">*</span>
                             </div>
                             <div class="signup_btn_div">
                                 <button type="submit" class="auth_btn">Sign up</button>

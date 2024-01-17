@@ -29,8 +29,8 @@ img{
     max-width: 100%;
 }
 .cursor{
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
     position: absolute;
     z-index: 999999999999999999;
     pointer-events: none;
@@ -42,8 +42,8 @@ img{
 
 /*========== Global CSS Start ===========*/
 .container{
-    width: 100%;
-    max-width: 1920px;
+    width: 100vw;
+    max-width: 100%;
     padding: 0 3rem;
     margin: 0 auto;
     height: 100%;
@@ -53,12 +53,50 @@ img{
 
 
 /*======== Styling Started =============*/
+/* ChatBoot */
+.chat_bot{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background: transparent;
+}
+.chat_bot .chat_bot_button{
+    width: 3rem;
+    height: 3rem;
+    line-height: 3.6rem;
+    text-align: center;
+    border-radius: 50%;
+    background: #2b3d66;
+    border: 1px solid rgba(255, 255, 255, .7);
+    outline: none;
+    position: relative;
+    margin-left: auto;
+}
+.chat_bot .chat_bot_button i{
+    font-size: 1.8rem;
+    color: #c1bfbf;
+}
+.chat_bot .chat_bot_body{
+    width: 23rem;
+    height: 25rem;
+    background: #ffffff;
+    border-radius: 1rem;
+    position: absolute;
+    right: 0;
+    bottom: 3.5rem;
+    display: none;
+}
+
+
+
+
 /*==== Preeloder Start =====*/
 .onLoad{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
+    max-width: 100%;
     height: 100%;
     /* background:#0101a8; */
     background: url('../img/background/welcome.jpg'), no-repeat;
@@ -204,7 +242,7 @@ img{
     max-width: 12rem;
     margin: auto;
 }
-.header_logo a img{
+.header_logo .home_page_logo img{
     max-width: 100%;
     height: auto;
 }
@@ -326,6 +364,7 @@ img{
 }
 .signup_main_div{
     width: 100vw;
+    max-width: 100%;
     min-height: 100vh;
     background: url('../img/signup/signup.jpg'), no-repeat;
     background-position: center;
@@ -426,6 +465,9 @@ img{
     color: #ffffff;
     margin-top: 0.5rem;
 }
+.login_inner form .form_inner_div label{
+    cursor: none;
+}
 .login_inner form .form_inner_div input::placeholder{
     font-size: .8rem;
     font-weight: 500;
@@ -434,10 +476,13 @@ img{
 .login_inner form .form_inner_div input{
     display: block;
     width: 100%;
-    padding: .6rem .6rem 0 .6rem;
+    padding: .6rem 0 0 .6rem;
     border-color: transparent;
     outline-color: transparent;
     background: transparent;
+} 
+.login_inner form .form_inner_div input.empty{
+    cursor: pointer;
 }
 .form_inner_div input[type="date"]::-webkit-calendar-picker-indicator{
   --webkit--cursor: pointer;
@@ -1322,7 +1367,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
         margin-bottom: 3rem;
     }
     .body_main .header_logo{
-        width: 100% !important;
+        width: 100% ;
         text-align: center;
     }
     .body_main .header_logo .home_page_logo img{
