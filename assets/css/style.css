@@ -482,7 +482,7 @@ img{
     background: transparent;
 } 
 .login_inner form .form_inner_div input.empty{
-    cursor: pointer;
+    cursor: text;
 }
 .form_inner_div input[type="date"]::-webkit-calendar-picker-indicator{
   --webkit--cursor: pointer;
