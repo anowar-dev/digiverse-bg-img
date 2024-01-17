@@ -514,7 +514,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     background: transparent;
 }
 .login_inner .auth_btns .auth_login_btn{
-    width: 6rem;
+    width: 7rem;
     height: 3rem;
     line-height: 3rem;
     text-align: left;
@@ -567,7 +567,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     font-size: .9rem;
 }
 .login_inner form .signup_btn_div{
-    width: 6rem;
+    width: 7rem;
     height: 3rem;
     line-height: 3rem;
     text-align: center;
@@ -1547,12 +1547,6 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
         font-size: 1.5rem !important;
         line-height: 2.2rem;
     }
-    .login_inner form .auth_btn{
-        font-size: .9rem !important;
-    }
-    .login_inner form .auth_btn:hover{
-        font-size: 1rem;
-    }
     .login_inner form .form_inner_div input::placeholder{
         font-size: .7rem !important;
     }
@@ -1640,6 +1634,12 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     }
     .indu_full_width_inner .about_bg_full_small{
         min-height: 370px;
+    }
+    .login_inner .auth_btn{
+        font-size: 14px;
+    }
+    .login_inner .auth_btn:hover{
+        font-size: 1rem;
     }
 }
 
