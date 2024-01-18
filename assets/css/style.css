@@ -938,9 +938,6 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     text-transform: uppercase;
     margin-bottom: 3rem;
     text-align: justify;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
     line-height: 160%;
 }
 .about_paragraph{
@@ -994,11 +991,15 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 }
  .about_full_content_inner{
     width: 90%;
-    max-width: 1024px;
+    max-width: 1100px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+ }
+ .about_full_content_inner .about_title{
+    width: fit-content;
+    margin-right: auto;
  }
 .about_full_width .ai_full_width_inner{
     position: relative;
@@ -1035,7 +1036,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     margin-bottom: 0;
 }
 .ai_content .about_title{
-    text-align: center;
+    margin-right: auto;
 }
 .about_full_width .indu_full_width_inner{
     width: 100%;
@@ -1064,7 +1065,10 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     transform: translate(-50%, -50%);
 }
 .text_div_4th .about_title{
-    text-align: center;
+    margin-right: auto;
+}
+.text_div_4th .aboutcontentList{
+    padding-left: 1rem;
 }
 .content_4th .text_div_4th ul li .about_paragraph{
    margin-bottom: 0;
@@ -1087,254 +1091,121 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     color: #ffffff;
     font-weight: 700;
 }
-
 .about_full_width .value_full_width_inner{
     width: 100%;
-    height: 100%;
-    position: relative;
+    background: rgba(27, 45, 90, .3);
+    padding: 5rem 0;
 }
 .value_full_width_inner .content_values{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 90%;
-    max-width: 1024px;
-} 
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .content_values .about_paragraph{
-    text-align: justify;
+    text-align: left;
+}
+.content_values .about_title{
+    margin-right: auto;
 }
 /* Dubble row */
-.about_dabble_section .about_dabble_section_inner{
+.about_dabble_section .about_dobble_inner{
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.about_dobble_inner .dobble_inner_content{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    height: 500px;
+    height: 400px;
 }
-.about_dabble_section_inner .about_left{
+.dobble_inner_content .dobble_inner_text{
+    width: 50%;
+    background: rgb(27, 45, 90, .8);
+    transition: all .3s;
+    height: 100%;
+    overflow-y: auto;
+    padding: 1rem;
+}
+.dobble_inner_content .dobble_inner_text::-webkit-scrollbar{
+    cursor: none;
+}
+.dobble_inner_text .about_title{
+    margin-right: auto;
+}
+.dobble_inner_content:hover .dobble_inner_text{
+    background: #2C3A47;
+}
+.dobble_inner_content .dobble_inner_img{
     width: 50%;
     height: 100%;
-    position: relative;
 }
-.about_dabble_section_inner .about_right{
-    width: 50%;
+.dobble_inner_img img{
+    width: 100%;
     height: 100%;
-    position: relative;
-}
-.about_left .about_tech_content{
-    padding-top: 10rem;
-    width: 90%;
-    max-width: 480px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.about_tech_content .about_title{
-    width: 100%;
-    text-align: right;
-    padding-right: 106px;
-}
-.tech_inner_img img{
-    width: 200px;
-}
-.about_tech_content .about_tech_inner{
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-}
-.about_tech_inner .tech_inner_text .about_paragraph{
-    text-align: right;
-}
-.about_right .about_innovation_content{
-    padding-top: 10rem;
-    width: 90%;
-    max-width: 480px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.about_innovation_content .about_innovation_content_inner{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-.about_innovation_content .about_title{
-    width: 100%;
-    text-align: left;
-    padding-left: 100px;
-}
-.innvation_text .about_paragraph{
-    text-align: left;
-}
-.innvation_img img{
-    width: 200px;
-}
-.innvation_text .about_title{
-    text-align: left;
-    margin-left: 0;
-}
-.about_left .about_privacy_content{
-    padding-top: 10rem;
-    width: 90%;
-    max-width: 480px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.about_privacy_content .about_privacy_inner{
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-}
-.privacy_inner_text .about_title{
-    margin-left: 0;
-}
-.privacy_inner_text .about_paragraph{
-    text-align: right;
-}
-.about_privacy_content .about_title{
-    width: 100%;
-    text-align: right;
-    padding-right: 106px;
-}
-.privacy_inner_img img{
-    width: 200px;
-}
-.about_right .about_patient_content{
-    padding-top: 10rem;
-    width: 90%;
-    max-width: 480px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.about_patient_content .about_patient_content_inner{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-.patient_text .about_paragraph{
-    text-align: left;
-}
-.patient_text .about_title{
-    margin-left: 0;
-}
-.patient_img img{
-    width: 200px;
-}
-.about_left .about_win_content{
-    padding-top: 10rem;
-    width: 90%;
-    max-width: 480px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.about_win_content .about_win_inner{
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-}
-.win_inner_text .about_title{
-    margin-left: 0;
-}
-.win_inner_text .about_paragraph{
-    text-align: right;
-}
-.win_inner_img img{
-    width: 200px;
-}
-.about_win_content .about_title{
-    width: 100%;
-    text-align: right;
-    padding-right: 107px;
 }
 
 /* Full width bottom */
 .about_full_width_bottom{
     position: relative;
 }
+.services_full_width_inner .full_bottom_tc{
+    background: rgba(27, 45, 90, .3);
+}
 .services_full_width_inner .full_width_bottom{
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding: 5rem 0;
     width: 90%;
-    max-width: 1024px;
+    max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: -10rem;
 }
 .services_full_width_inner .full_width_bottom .about_paragraph{
     text-align: justify;
 }
-.full_width_bottom .full_width_bottom_inner{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    column-gap: 8%;
-    margin-top: 3rem;
-}
-.full_width_bottom_inner .full_b_left{
-    width: 46%;
-    height: 100%;
-}
-.full_width_bottom_inner .full_b_right{
-    width: 46%;
-    height: 100%;
-}
-.full_width_bottom_inner .b_single_inner{
-    text-align: center;
-    margin-bottom: 3rem;
-    padding-left: 1rem;
-    width: 90%;
-    max-width: 480px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20rem;
-}
-.b_single_inner .service_title{
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #ffffff;
-    text-align: left;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-}
-.b_single_inner .service_list{
-    margin-left: 0;
-    padding-left: 0;
-    list-style: disc;
-    color: #ffffff;
-}
-.b_single_inner .service_list li .service_content{
-    font-size: 1rem;
-    font-weight: 400;
-    color: #ffffff;
-    line-height: 200%;
-    text-align: left;
-    margin-bottom: .2rem;
-}
-.b_single_inner .bottom_finished{
-    font-size: .6rem;
-    font-weight: 400;
-    color: #ffffff;
-    line-height: 140%;
-    margin-top: 3rem;
-    text-align: left;
-}
-.b_single_inner .bottom_finished a{
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: 500;
-    opacity: .6;
-    transition: .3s;
-}
-.b_single_inner .bottom_finished a:hover{
-    opacity: 1;
-}
-
-
-
-.full_width_bottom_inner .full_bottom_inner_content{
+.about_service_bottom .about_service_bottom_inner{
     display: grid;
     grid-template-columns: auto auto;
-    margin-bottom: 15rem;
+}
+.about_service_bottom_inner .about_service_bottom_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+.about_service_bottom_content .service_bottom_content_text{
+    width: 50%;
+    overflow-y: auto;
+    height: 100%;
+    padding: 1rem;
+    background: rgba(27, 45, 90, .8);
+    transition: all .3rem;
+}
+.about_service_bottom_content:hover .service_bottom_content_text{
+    background: #1e272e;
+}
+.about_service_bottom_content .service_bottom_content_img{
+    width: 50%;
+}
+.about_finished{
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    text-align: right;
+    width: 90%; 
+}
+.about_finished .finished_para{
+    font-size: .7rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+.about_finished .finished_para a{
+    text-decoration: none;
+    transition: all .3s;
+    opacity: .5;
+    color: #ffffff;
+}
+.about_finished .finished_para a:hover{
+    opacity: 1;
 }
 /*========== Start Responsive ===========*/
 /*------- max-width: 1400px  --------*/
