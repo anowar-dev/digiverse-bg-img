@@ -123,34 +123,41 @@ $(document).ready(function () {
   // see more click
   
 
+  // $(".seemore").each(function (i) {
+  //   const current = $(this);
+  //   current.click(() => {
+  //     const currentIndex = i;
+  //     $(".dubble_animation_single").each(function (mainIndex) {
+  //       if (mainIndex > currentIndex) {
+  //         const currentMain = $(this);
+  //         currentMain.addClass("translate92");
+  //       } else {
+  //         currentMain.removeClass("translate92");
+  //       }
+  //     });
+  //       $(".dobble_animation_main").css({ transform: "translate(0)" });
+  //       $(".about_dobble_inner").css({transform: "translate(-100%)"});
+  //       $(".about_dobble_inner").css({position: "absolute"});
+  //   });
+  // });
+
   $(".seemore").each(function (i) {
+    const currentIndex = i;
     const current = $(this);
     current.click(() => {
-      const currentIndex = i;
       $(".dubble_animation_single").each(function (mainIndex) {
+        const currentMain = $(this);
         if (mainIndex > currentIndex) {
-          const currentMain = $(this);
           currentMain.addClass("translate92");
+        } else {
+          currentMain.removeClass("translate92");
         }
       });
-        $(".dobble_animation_main").css({ transform: "translate(0)" });
-        $(".about_dobble_inner").css({transform: "translate(-100%)"});
-        $(".about_dobble_inner").css({position: "absolute"});
+      $(".dobble_animation_main").css({ transform: "translate(0)" });
+      $(".about_dobble_inner").css({ transform: "translate(-100%)" });
+      $(".about_dobble_inner").css({ position: "absolute" });
     });
   });
-
-  // Go back click
-  // $(".go_back").on("click", function () {
-  //   $(".dobble_animation_main").css({ transform: "translate(100%)" });
-  //   $(".about_dobble_inner").css({ position: "relative" });
-  //  $(".about_dobble_inner").css({ transform: "translate(0)" });
-  //  $(".dubble_animation_single").each(function (mainIndex) {
-  //      const currentMain = $(this);
-  //     if(currentMain.hasClass("translate92")){
-  //       currentMain.removeClass("translate92");
-  //     }
-  //  });
-  // });
 
   $(".go_back").each(function(gbackIndex){
   const currentBack = $(this);

@@ -1154,9 +1154,9 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     transition: all .3s;
     height: 100%;
     overflow: hidden;
-    padding: 2.5rem 2.5rem 5rem 2.5rem;
+    padding: 2.5rem;
 }
-.dobble_inner_text .about_paragraph .seemore{
+.dobble_inner_text .seemore{
     font-size: .9rem;
     font-weight: 500;
     background: transparent;
@@ -1168,7 +1168,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     opacity: .5;
     transition: all.3s;
 }
-.about_paragraph .seemore:hover{
+.dobble_inner_text .seemore:hover{
     opacity: 1;
 }
 .dobble_inner_text .about_title{
