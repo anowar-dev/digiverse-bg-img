@@ -121,26 +121,6 @@ $(document).ready(function () {
 
   //============ Our values section animation start ==========
   // see more click
-  
-
-  // $(".seemore").each(function (i) {
-  //   const current = $(this);
-  //   current.click(() => {
-  //     const currentIndex = i;
-  //     $(".dubble_animation_single").each(function (mainIndex) {
-  //       if (mainIndex > currentIndex) {
-  //         const currentMain = $(this);
-  //         currentMain.addClass("translate92");
-  //       } else {
-  //         currentMain.removeClass("translate92");
-  //       }
-  //     });
-  //       $(".dobble_animation_main").css({ transform: "translate(0)" });
-  //       $(".about_dobble_inner").css({transform: "translate(-100%)"});
-  //       $(".about_dobble_inner").css({position: "absolute"});
-  //   });
-  // });
-
   $(".seemore").each(function (i) {
     const currentIndex = i;
     const current = $(this);
@@ -154,26 +134,28 @@ $(document).ready(function () {
         }
       });
       $(".dobble_animation_main").css({ transform: "translate(0)" });
-      $(".about_dobble_inner").css({ transform: "translate(-100%)" });
       $(".about_dobble_inner").css({ position: "absolute" });
+      $(".about_dobble_inner").css({ transform: "translate(-100%)" });
     });
   });
 
-  $(".go_back").each(function(gbackIndex){
-  const currentBack = $(this);
-  currentBack.click(function(){
-    $(".dubble_animation_single").each(function () {
-      const curredoubleAnim = $(this);
-      if (curredoubleAnim.hasClass("translate92")) {
-        curredoubleAnim.removeClass("translate92");
-      }
+  // Go back click
+  $(".go_back").each(function (gbackIndex) {
+    const currentBack = $(this);
+    currentBack.click(function () {
+      $(".dubble_animation_single").each(function () {
+        const curredoubleAnim = $(this);
+        if (curredoubleAnim.hasClass("translate92")) {
+          curredoubleAnim.removeClass("translate92");
+        }
+      });
+      $(".dobble_animation_main").css({ transform: "translate(100%)" });
+      $(".about_dobble_inner").css({ position: "relative" });
+      $(".about_dobble_inner").css({ transform: "translate(0)" });
     });
-    $(".dobble_animation_main").css({ transform: "translate(100%)" });
-    $(".about_dobble_inner").css({ position: "relative" });
-    $(".about_dobble_inner").css({ transform: "translate(0)" });
-  });
-});
+  });
 
+  // Single Animation section
   $(".dubble_animation_single").each(function (aIndex) {
     const currentBtn = $(this);
     currentBtn.click(function () {
@@ -194,39 +176,66 @@ $(document).ready(function () {
     });
   });
 
-  // single div click
-  // $(".animation_btn_div").each(function (i) {
-  //   var current = $(this);
-
-  //   $(current).click(function () {
-  //     // Get the index of the clicked element
-  //     var currentIndex = current.index();
-
-  //     // Check if the class 'x2' is present in the current element's parent
-  //     var hasClassX2 = current
-  //       .parent(".dubble_animation_single")
-  //       .hasClass("translate92");
-
-  //     // Add the class 'x2' to the current element's parent and all elements with a greater index
-  //     if (currentIndex > 0 && !hasClassX2) {
-  //       current
-  //         .parent(".dubble_animation_single")
-  //         .prevAll(".dubble_animation_single")
-  //         .addBack()
-  //         .addClass("translate92");
-  //     }
-
-  //     // Remove the class 'x2' from the current element's parent and all elements with a smaller index
-  //     else if (hasClassX2 == true)
-  //       $(".dubble_animation_single:lt(" + currentIndex + ")").removeClass(
-  //         "translate92"
-  //       );
-  //   });
-  // });
-
-
-  
   //============ Our values section animation end ==========
+
+  //============ OUR SERVICES section animation start ==========
+  // see more click
+  $(".bottom_seemore").each(function (i) {
+    const currentIndex = i;
+    const current = $(this);
+    current.click(() => {
+      $(".bottom_animation_single").each(function (mainIndex) {
+        const currentMain = $(this);
+        if (mainIndex > currentIndex) {
+          currentMain.addClass("translate92");
+        } else {
+          currentMain.removeClass("translate92");
+        }
+      });
+      $(".bottom_animation_main").css({ transform: "translate(0)" });
+      $(".about_service_bottom_inner").css({ position: "absolute" });
+      $(".about_service_bottom_inner").css({ transform: "translate(-100%)" });
+    });
+  });
+
+  // Go back click
+  $(".go_back_bottom").each(function (gbackIndex) {
+    const currentBack = $(this);
+    currentBack.click(function () {
+      $(".bottom_animation_single").each(function () {
+        const curredoubleAnim = $(this);
+        if (curredoubleAnim.hasClass("translate92")) {
+          curredoubleAnim.removeClass("translate92");
+        }
+      });
+      $(".bottom_animation_main").css({ transform: "translate(100%)" });
+      $(".about_service_bottom_inner").css({ position: "relative" });
+      $(".about_service_bottom_inner").css({ transform: "translate(0)" });
+    });
+  });
+
+  // Single Animation section
+  $(".bottom_animation_single").each(function (aIndex) {
+    const currentBtn = $(this);
+    currentBtn.click(function () {
+      if (currentBtn.hasClass("translate92")) {
+        $(".bottom_animation_single").each(function (index) {
+          const currentElement = $(this);
+          if (index <= aIndex) {
+            currentElement.removeClass("translate92");
+          }
+        });
+      } else {
+        $(".bottom_animation_single").each(function (laterIndex) {
+          if (aIndex < laterIndex) {
+            $(this).addClass("translate92");
+          }
+        });
+      }
+    });
+  });
+
+  //============ OUR SERVICES section animation end ==========
 });
 
 

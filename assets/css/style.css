@@ -946,8 +946,8 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     color: #ffffff;
     text-transform: uppercase;
     margin-bottom: 3rem;
-    text-align: justify;
-    line-height: 160%;
+    text-align: left;
+    line-height: 140%;
 }
 .about_paragraph{
     font-size: .9rem;
@@ -955,6 +955,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     color: #ffffff;
     text-align: justify;
     line-height: 150%;
+    letter-spacing: .1px;
 }
 .about_sub_title{
     font-size: 1rem;
@@ -1125,7 +1126,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     position: relative;
     display: grid;
     grid-template-columns: auto auto;
-    transition: all .5s;
+    transition: all .7s;
     min-height: 500px;
 }
 .about_dabble_section .about_dobble_inner > :last-child {
@@ -1154,7 +1155,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     transition: all .3s;
     height: 100%;
     overflow: hidden;
-    padding: 2.5rem;
+    padding: 2rem;
 }
 .dobble_inner_text .seemore{
     font-size: .9rem;
@@ -1165,7 +1166,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     color: #ffffff;
     padding-left: 0;
     text-transform: uppercase;
-    opacity: .5;
+    opacity: .6;
     transition: all.3s;
 }
 .dobble_inner_text .seemore:hover{
@@ -1192,17 +1193,22 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 .about_dabble_section{
     position: relative;
     min-height: 500px;
+    overflow: hidden;
 }
+/* .about_dabble_section.active{
+    overflow: auto;
+} */
 .dobble_animation_main{
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     width: 100%;
     transform: translate(100%);
-    transition: .5s;
+    transition: .7s;
 }
 .translate92{
     transform: translate(90%);
+    position: absolute;
 }
 .translate0{
     transform: translate(0);
@@ -1260,7 +1266,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     border: none;
 }
 .animation_content .about_paragraph{
-    line-height: 170%;
+    line-height: 160%;
 }
 .animation_content .go_back{
     background: transparent;
@@ -1270,7 +1276,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     font-size: 1.3rem;
     font-weight: 600;
     text-transform: uppercase;
-    opacity: .5;
+    opacity: .6;
     transition: opacity .3s;
     position: absolute;
     width: fit-content;
@@ -1284,6 +1290,14 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 
 
 /* Full width bottom */
+.about_service_bottom{
+    position: relative;
+    overflow: hidden;
+    min-height: 550px;
+}
+.about_service_bottom.active{
+    overflow: auto;
+}
 .about_full_width_bottom{
     position: relative;
 }
@@ -1303,6 +1317,8 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 .about_service_bottom .about_service_bottom_inner{
     display: grid;
     grid-template-columns: auto auto;
+    transition: .7s;
+    min-height: 550px;
 }
 .about_service_bottom_inner .about_service_bottom_content{
     display: flex;
@@ -1324,9 +1340,13 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     width: 50%;
     overflow-y: auto;
     height: 100%;
-    padding: 1rem;
-    background: rgba(0, 0, 0, .7);
+    padding: 2rem;
+    background: rgba(0, 0, 0, .8);
     transition: all .3rem;
+}
+.service_bottom_content_text .about_title{
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
 }
 .about_service_bottom_content:hover .service_bottom_content_text{
     background: #1A2D5A;
@@ -1356,6 +1376,109 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 .about_finished .finished_para a:hover{
     opacity: 1;
 }
+.service_bottom_content_text .bottom_seemore {
+    font-size: .9rem;
+    font-weight: 500;
+    background: transparent;
+    outline: none;
+    border: none;
+    color: #ffffff;
+    padding-left: 0;
+    text-transform: uppercase;
+    opacity: .6;
+    transition: all.3s;
+}
+.service_bottom_content_text .bottom_seemore:hover{
+    opacity: 1;
+}
+
+
+/* About Bottom Anomation Start */
+.bottom_animation_main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translate(100%);
+    transition: .7s;
+    min-height: 550px;
+}
+.bottom_animation_inner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.bottom_animation_inner .bottom_animation_single:nth-child(odd){
+    background: #1A2D5A;
+}
+.bottom_animation_inner .bottom_animation_single {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 550px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all .5s;
+    z-index: 1;
+    background: #000000;
+    width: 70%;
+    border: 1px solid rgba(255, 255, 255, .2);
+}
+.bottom_animation_single.ai_healht{
+    margin-right: 30%;
+}
+.bottom_animation_single.DIAGNOSIS{
+    margin-right: 24%;
+}
+.bottom_animation_single.APPOINTMENTS{
+    margin-right: 18%;
+}
+.bottom_animation_single.INSURANCE{
+    margin-right: 12%;
+}
+.bottom_animation_single.TELEMEDICINE{
+    margin-right: 6%;
+}
+.bottom_animation_single .bottom_animation_btn_div {
+    width: 10%;
+    height: 5rem;
+    transform: rotate(270deg);
+    white-space: nowrap;
+    margin-bottom: 5rem;
+}
+.bottom_animation_single .bottom_animation_btn_div .about_title {
+    background: transparent;
+    outline: none;
+    border: none;
+}
+.bottom_animation_single .bottom_animation_content {
+    padding: 4rem;
+    height: 100%;
+    width: 90%;
+    position: relative;
+    height: 100%;
+}
+.bottom_animation_content .go_back_bottom {
+    background: transparent;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: .6;
+    transition: opacity .3s;
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    left: 4rem;
+    bottom: 4rem;
+}
+.bottom_animation_content .go_back_bottom:hover{
+    opacity: 1;
+}
+
 /*========== Start Responsive ===========*/
 /*------- max-width: 1400px  --------*/
 
