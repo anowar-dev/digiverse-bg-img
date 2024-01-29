@@ -1127,7 +1127,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     display: grid;
     grid-template-columns: auto auto;
     transition: all .7s;
-    min-height: 500px;
+    min-height: fit-content;
 }
 .about_dabble_section .about_dobble_inner > :last-child {
     grid-column: span 2;
@@ -1138,7 +1138,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 480px;
+    height: 100%;
     position: relative;
 }
 .dobble_inner_content img{
@@ -1171,9 +1171,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     opacity: .6;
     transition: all.3s;
 }
-.less{
-    display: none;
-}
+
 .dobble_inner_text .seemore:hover{
     opacity: 1;
 }
@@ -1205,6 +1203,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 .width_100{
     width: 100%;
 }
+
 
 
 
@@ -1243,7 +1242,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 400px;
+    min-height: fit-content;
     position: relative;
 }
 .about_service_bottom_content img{
@@ -1255,13 +1254,13 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     z-index: -1;
 }
 
-.about_service_bottom_content .service_bottom_content_text{
+.service_bottom_content_text{
     width: 50%;
     overflow: hidden;
     height: 100%;
     padding: 2rem;
     background: rgba(0, 0, 0, .7);
-    transition: all .5rem;
+    transition: .5s;
 }
 .service_bottom_content_text .about_title{
     font-size: 1.4rem;
@@ -1307,17 +1306,20 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     opacity: .6;
     transition: all.3s;
 }
-.bottom_less{
-    display: none;
-}
+
 .service_bottom_content_text .bottom_seemore:hover{
     opacity: 1;
 }
 .service_bottom_content_text .bottom_less:hover{
     opacity: 1;
 }
-
-
+.bottom_width{
+    width: 100%;
+    transition: all .5s;
+}
+.bbg_blue{
+    background: #1A2D5A;
+}
 
 
 /*========== Start Responsive ===========*/

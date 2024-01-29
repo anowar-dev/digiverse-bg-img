@@ -121,36 +121,126 @@ $(document).ready(function () {
 
   //============ Our values section animation start ==========
   // see more click
-  $(".seemore").each(function () {
-    let current = $(this);
+  // $(".seemore").each(function () {
+  //   let current = $(this);
 
-    current.click(() => {
-      current.addClass("display_none");
-      let closetParent = current.closest(".dobble_inner_text");
-      closetParent.find(".values_halfContent").addClass("display_none");
-      closetParent.find(".values_fullContent").removeClass("d-none");
-      closetParent.find(".less").addClass("display_block");
-      closetParent.addClass("width_100");
-      closetParent
-        .siblings(".dobble_inner_img")
-        .addClass("display_none");
+  //   current.click(() => {
+  //     current.addClass("display_none");
+  //     let closetParent = current.closest(".dobble_inner_text");
+  //     closetParent.find(".values_halfContent").addClass("display_none");
+  //     closetParent.find(".values_fullContent").removeClass("d-none");
+  //     closetParent.find(".less").addClass("display_block");
+  //     closetParent.addClass("width_100");
+  //     closetParent.siblings(".dobble_inner_img").addClass("display_none");
+  //   });
+  // });
+
+  // // Go back click
+  // $(".less").each(function () {
+  //   let current = $(this);
+
+  //   current.click(() => {
+  //     current.removeClass("display_block");
+  //     let closetParent = current.closest(".dobble_inner_text");
+  //     closetParent.find(".values_fullContent").addClass("d-none");
+  //     closetParent.removeClass("width_100");
+  //     closetParent.siblings(".dobble_inner_img").removeClass("display_none");
+  //     closetParent.find(".values_halfContent").removeClass("display_none");
+  //     closetParent.find(".seemore").removeClass("display_none");
+  //   });
+  // });
+
+  // see more click
+
+  $(".seemore").each(function (seeMoreIndex) {
+    const currentSeeMore = $(this);
+    currentSeeMore.click(function () {
+      $(".seemore").each(function (newSeeMoreIndex) {
+        const newSeeMoreBtn = $(this);
+        if (seeMoreIndex != newSeeMoreIndex) {
+          const newClosetParentInner =
+            newSeeMoreBtn.closest(".dobble_inner_text");
+          const newHalfTextInner = newClosetParentInner.find(
+            ".values_halfContent"
+          );
+
+          const newFullTextInner = newClosetParentInner.find(
+            ".values_fullContent"
+          );
+          const newLessBtnInner = newClosetParentInner.find(".less");
+
+          const newImgDivInner =
+            newClosetParentInner.siblings(".dobble_inner_img");
+
+          newHalfTextInner.removeClass("display_none");
+          newSeeMoreBtn.removeClass("display_none");
+          newFullTextInner.addClass("d-none");
+          newLessBtnInner.addClass("d-none");
+          newImgDivInner.removeClass("display_none");
+          newClosetParentInner.removeClass("width_100");
+        } else {
+          const closetParentInner = newSeeMoreBtn.closest(".dobble_inner_text");
+          const halfText = closetParentInner.find(".values_halfContent");
+          const fullText = closetParentInner.find(".values_fullContent");
+          const lessBtnInner = closetParentInner.find(".less");
+          const imgDivInner = closetParentInner.siblings(".dobble_inner_img");
+
+          fullText.removeClass("d-none");
+          lessBtnInner.removeClass("d-none");
+          halfText.addClass("display_none");
+          newSeeMoreBtn.addClass("display_none");
+          imgDivInner.addClass("display_none");
+          closetParentInner.addClass("width_100");
+        }
+      });
     });
   });
 
-  // Go back click
-  $(".less").each(function () {
-    let current = $(this);
+  // Less button click
+  $(".less").each(function (lessIndex) {
+    const currentLessBtn = $(this);
+    currentLessBtn.click(function () {
+      $(".less").each(function (newLessIndex) {
+        const newLessBtn = $(this);
+        if (newLessIndex != lessIndex) {
+          const closetParentInner = newLessBtn.closest(".dobble_inner_text");
+          const halfText = closetParentInner.find(".values_halfContent");
+          const fullText = closetParentInner.find(".values_fullContent");
+          const lessBtnInner = closetParentInner.find(".bottom_less");
+          const imgDivInner = closetParentInner.siblings(".dobble_inner_img");
 
-    current.click(() => {
-      current.removeClass("display_block");
-      let closetParent = current.closest(".dobble_inner_text");
-      closetParent.find(".values_fullContent").addClass("d-none");
-      closetParent.removeClass("width_100");
-      closetParent
-        .siblings(".dobble_inner_img")
-        .removeClass("display_none");
-      closetParent.find(".values_halfContent").removeClass("display_none");
-      closetParent.find(".seemore").removeClass("display_none");
+          // fullText.removeClass("d-none");
+          // lessBtnInner.removeClass("d-none");
+          // halfText.addClass("display_none");
+          // newLessBtn.addClass("display_none");
+          // imgDivInner.addClass("display_none");
+          // closetParentInner.addClass("bottom_width");
+          closetParentInner.removeClass("bbg_blue");
+        } else {
+          const newClosetParentInner = newLessBtn.closest(".dobble_inner_text");
+          const newHalfTextInner = newClosetParentInner.find(
+            ".values_halfContent"
+          );
+
+          const newFullTextInner = newClosetParentInner.find(
+            ".values_fullContent"
+          );
+          const newLessBtnInner = newClosetParentInner.find(".less");
+
+          const newImgDivInner =
+            newClosetParentInner.siblings(".dobble_inner_img");
+          const semore = newClosetParentInner.find(".seemore");
+
+          newHalfTextInner.removeClass("display_none");
+          newLessBtn.removeClass("display_none");
+          newFullTextInner.addClass("d-none");
+          newLessBtnInner.addClass("d-none");
+          newImgDivInner.removeClass("display_none");
+          newClosetParentInner.removeClass("width_100");
+          newClosetParentInner.removeClass("bbg_blue");
+          semore.removeClass("display_none");
+        }
+      });
     });
   });
 
@@ -158,84 +248,107 @@ $(document).ready(function () {
 
   //============ OUR SERVICES section animation start ==========
   // see more click
-  $(".bottom_seemore").each(function () {
-    const current = $(this);
-    let closetParent = current.closest(".service_bottom_content_text");
-    let halfText = closetParent.find(".services_halfText");
-    let fullText = closetParent.find(".services_fullText");
-    let lessBtn = closetParent.find(".bottom_less");
-    let imgDiv = closetParent.siblings(".service_bottom_content_img");
-    current.click(() => {
-      $(".bottom_seemore").each(function (mainIndex) {
-        const currentSeemore = $(this);
-        currentSeemore.click(function(){
-          let closetParentInner = currentSeemore.closest(
+
+  $(".bottom_seemore").each(function (seeMoreIndex) {
+    const currentSeeMore = $(this);
+    currentSeeMore.click(function () {
+      $(".bottom_seemore").each(function (newSeeMoreIndex) {
+        const newSeeMoreBtn = $(this);
+        if (seeMoreIndex != newSeeMoreIndex) {
+          const newClosetParentInner = newSeeMoreBtn.closest(
             ".service_bottom_content_text"
           );
-          let halfTextInner = closetParentInner.find(".services_halfText");
-          let fullTextInner = closetParentInner.find(".services_fullText");
-          let lessBtnInner = closetParentInner.find(".bottom_less");
-          let imgDivInner = closetParentInner.siblings(
+          const newHalfTextInner =
+            newClosetParentInner.find(".services_halfText");
+
+          const newFullTextInner =
+            newClosetParentInner.find(".services_fullText");
+          const newLessBtnInner = newClosetParentInner.find(".bottom_less");
+
+          const newImgDivInner = newClosetParentInner.siblings(
             ".service_bottom_content_img"
           );
-          if (
-            current.hasClass("display_none") &&
-            halfText.hasClass("display_none") &&
-            !fullText.hasClass("d-none")
-          ) {
-            current.removeClass("display_none");
-            halfText.removeClass("display_none");
-            fullText.addClass("d-none")
-            currentSeemore.addClass("display_none");
-            halfTextInner.addClass("display_none");
-            fullTextInner.removeClass("d-none")
-          }
-          else {
-            currentSeemore.addClass("display_none");
-            halfTextInner.addClass("display_none");
-            fullTextInner.addClass("d_none");
-          }
-        })
+
+          newHalfTextInner.removeClass("display_none");
+          newSeeMoreBtn.removeClass("display_none");
+          newFullTextInner.addClass("d-none");
+          newLessBtnInner.addClass("d-none");
+          newImgDivInner.removeClass("display_none");
+          newClosetParentInner.removeClass("bottom_width");
+        } else {
+          const closetParentInner = newSeeMoreBtn.closest(
+            ".service_bottom_content_text"
+          );
+          const halfText = closetParentInner.find(".services_halfText");
+          const fullText = closetParentInner.find(".services_fullText");
+          const lessBtnInner = closetParentInner.find(".bottom_less");
+          const imgDivInner = closetParentInner.siblings(
+            ".service_bottom_content_img"
+          );
+
+          fullText.removeClass("d-none");
+          lessBtnInner.removeClass("d-none");
+          halfText.addClass("display_none");
+          newSeeMoreBtn.addClass("display_none");
+          imgDivInner.addClass("display_none");
+          closetParentInner.addClass("bottom_width");
+        }
       });
     });
   });
 
-  // Go back click
-  // $(".go_back_bottom").each(function (gbackIndex) {
-  //   const currentBack = $(this);
-  //   currentBack.click(function () {
-  //     $(".bottom_animation_single").each(function () {
-  //       const curredoubleAnim = $(this);
-  //       if (curredoubleAnim.hasClass("translate92")) {
-  //         curredoubleAnim.removeClass("translate92");
-  //       }
-  //     });
-  //     $(".bottom_animation_main").css({ transform: "translate(100%)" });
-  //     $(".about_service_bottom_inner").css({ position: "relative" });
-  //     $(".about_service_bottom_inner").css({ transform: "translate(0)" });
-  //   });
-  // });
+  // Less button click
+  $(".bottom_less").each(function (lessIndex) {
+    const currentLessBtn = $(this);
+    currentLessBtn.click(function () {
+      $(".bottom_less").each(function (newLessIndex) {
+        const newLessBtn = $(this);
+        if (newLessIndex != lessIndex) {
+          const closetParentInner = newLessBtn.closest(
+            ".service_bottom_content_text"
+          );
+          const halfText = closetParentInner.find(".services_halfText");
+          const fullText = closetParentInner.find(".services_fullText");
+          const lessBtnInner = closetParentInner.find(".bottom_less");
+          const imgDivInner = closetParentInner.siblings(
+            ".service_bottom_content_img"
+          );
 
-  // Single Animation section
-  // $(".bottom_animation_single").each(function (aIndex) {
-  //   const currentBtn = $(this);
-  //   currentBtn.click(function () {
-  //     if (currentBtn.hasClass("translate92")) {
-  //       $(".bottom_animation_single").each(function (index) {
-  //         const currentElement = $(this);
-  //         if (index <= aIndex) {
-  //           currentElement.removeClass("translate92");
-  //         }
-  //       });
-  //     } else {
-  //       $(".bottom_animation_single").each(function (laterIndex) {
-  //         if (aIndex < laterIndex) {
-  //           $(this).addClass("translate92");
-  //         }
-  //       });
-  //     }
-  //   });
-  // });
+          // fullText.removeClass("d-none");
+          // lessBtnInner.removeClass("d-none");
+          // halfText.addClass("display_none");
+          // newLessBtn.addClass("display_none");
+          // imgDivInner.addClass("display_none");
+          // closetParentInner.addClass("bottom_width");
+          closetParentInner.removeClass("bbg_blue");
+        } else {
+          const newClosetParentInner = newLessBtn.closest(
+            ".service_bottom_content_text"
+          );
+          const newHalfTextInner =
+            newClosetParentInner.find(".services_halfText");
+
+          const newFullTextInner =
+            newClosetParentInner.find(".services_fullText");
+          const newLessBtnInner = newClosetParentInner.find(".bottom_less");
+
+          const newImgDivInner = newClosetParentInner.siblings(
+            ".service_bottom_content_img"
+          );
+          const semore = newClosetParentInner.find(".bottom_seemore");
+
+          newHalfTextInner.removeClass("display_none");
+          newLessBtn.removeClass("display_none");
+          newFullTextInner.addClass("d-none");
+          newLessBtnInner.addClass("d-none");
+          newImgDivInner.removeClass("display_none");
+          newClosetParentInner.removeClass("bottom_width");
+          newClosetParentInner.removeClass("bbg_blue");
+          semore.removeClass("display_none");
+        }
+      });
+    });
+  });
 
   //============ OUR SERVICES section animation end ==========
 });
