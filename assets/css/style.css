@@ -1138,7 +1138,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 400px;
+    height: 480px;
     position: relative;
 }
 .dobble_inner_content img{
@@ -1149,15 +1149,17 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     left: 0;
     z-index: -1;
 }
-.dobble_inner_content .dobble_inner_text{
+.dobble_inner_text{
     width: 50%;
-    background: rgb(0, 0, 0, .8);
+    background: rgb(0, 0, 0, .7);
     transition: all .3s;
     height: 100%;
     overflow: hidden;
     padding: 2rem;
+    transition: all .5s;
 }
-.dobble_inner_text .seemore{
+
+.dobble_inner_text .seemore, .less{
     font-size: .9rem;
     font-weight: 500;
     background: transparent;
@@ -1169,7 +1171,13 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     opacity: .6;
     transition: all.3s;
 }
+.less{
+    display: none;
+}
 .dobble_inner_text .seemore:hover{
+    opacity: 1;
+}
+.dobble_inner_text .less:hover{
     opacity: 1;
 }
 .dobble_inner_text .about_title{
@@ -1188,105 +1196,16 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     width: 100%;
     height: 100%;
 }
-
-/* About Animation */
-.about_dabble_section{
-    position: relative;
-    min-height: 500px;
-    overflow: hidden;
+.display_none{
+    display: none;
 }
-/* .about_dabble_section.active{
-    overflow: auto;
-} */
-.dobble_animation_main{
-    position: absolute;
-    top: 0;
-    right: 0;
+.display_block{
+    display: block;
+}
+.width_100{
     width: 100%;
-    transform: translate(100%);
-    transition: .7s;
 }
-.translate92{
-    transform: translate(90%);
-    position: absolute;
-}
-.translate0{
-    transform: translate(0);
-}
-.dubble_animation_inner{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-}
-.dubble_animation_inner .dubble_animation_single{
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    height: 500px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transition: all .5s;
-    z-index: 1;
-    background: #000000;
-    width: 72%;
-    border: 1px solid rgba(255, 255, 255, .2);
-}
-.dubble_animation_inner .dubble_animation_single:nth-child(odd){
-    background: #1A2D5A;
-}
-.dubble_animation_single.PATIENT{
-    margin-right: 7%;
-}
-.dubble_animation_single.PRIVACY{
-    margin-right: 14%;
-}
-.dubble_animation_single.INNOVATION{
-    margin-right: 21%;
-}
-.dubble_animation_single.TECHNOLOGY{
-    margin-right: 28%;
-}
-.dubble_animation_single .animation_content{
-    padding: 4rem;
-    height: 100%;
-    width: 90%;
-    position: relative;
-}
-.dubble_animation_single .animation_btn_div{
-    width: 10%;
-    height: 5rem;
-    transform: rotate(270deg);
-    white-space: nowrap;
-    margin-bottom: 5rem;
-}
-.dubble_animation_single .animation_btn_div .about_title{
-    background: transparent;
-    outline: none;
-    border: none;
-}
-.animation_content .about_paragraph{
-    line-height: 160%;
-}
-.animation_content .go_back{
-    background: transparent;
-    color: #ffffff;
-    border: none;
-    outline: none;
-    font-size: 1.3rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    opacity: .6;
-    transition: opacity .3s;
-    position: absolute;
-    width: fit-content;
-    height: fit-content;
-    left: 4rem;
-    bottom: 4rem;
-}
-.animation_content .go_back:hover{
-    opacity: 1;
-}
+
 
 
 /* Full width bottom */
@@ -1338,11 +1257,11 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 
 .about_service_bottom_content .service_bottom_content_text{
     width: 50%;
-    overflow-y: auto;
+    overflow: hidden;
     height: 100%;
     padding: 2rem;
-    background: rgba(0, 0, 0, .8);
-    transition: all .3rem;
+    background: rgba(0, 0, 0, .7);
+    transition: all .5rem;
 }
 .service_bottom_content_text .about_title{
     font-size: 1.4rem;
@@ -1376,7 +1295,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 .about_finished .finished_para a:hover{
     opacity: 1;
 }
-.service_bottom_content_text .bottom_seemore {
+.service_bottom_content_text .bottom_seemore, .bottom_less {
     font-size: .9rem;
     font-weight: 500;
     background: transparent;
@@ -1388,96 +1307,18 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     opacity: .6;
     transition: all.3s;
 }
+.bottom_less{
+    display: none;
+}
 .service_bottom_content_text .bottom_seemore:hover{
     opacity: 1;
 }
-
-
-/* About Bottom Anomation Start */
-.bottom_animation_main {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    transform: translate(100%);
-    transition: .7s;
-    min-height: 550px;
-}
-.bottom_animation_inner {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-}
-.bottom_animation_inner .bottom_animation_single:nth-child(odd){
-    background: #1A2D5A;
-}
-.bottom_animation_inner .bottom_animation_single {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    height: 550px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transition: all .5s;
-    z-index: 1;
-    background: #000000;
-    width: 70%;
-    border: 1px solid rgba(255, 255, 255, .2);
-}
-.bottom_animation_single.ai_healht{
-    margin-right: 30%;
-}
-.bottom_animation_single.DIAGNOSIS{
-    margin-right: 24%;
-}
-.bottom_animation_single.APPOINTMENTS{
-    margin-right: 18%;
-}
-.bottom_animation_single.INSURANCE{
-    margin-right: 12%;
-}
-.bottom_animation_single.TELEMEDICINE{
-    margin-right: 6%;
-}
-.bottom_animation_single .bottom_animation_btn_div {
-    width: 10%;
-    height: 5rem;
-    transform: rotate(270deg);
-    white-space: nowrap;
-    margin-bottom: 5rem;
-}
-.bottom_animation_single .bottom_animation_btn_div .about_title {
-    background: transparent;
-    outline: none;
-    border: none;
-}
-.bottom_animation_single .bottom_animation_content {
-    padding: 4rem;
-    height: 100%;
-    width: 90%;
-    position: relative;
-    height: 100%;
-}
-.bottom_animation_content .go_back_bottom {
-    background: transparent;
-    color: #ffffff;
-    border: none;
-    outline: none;
-    font-size: 1.3rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    opacity: .6;
-    transition: opacity .3s;
-    position: absolute;
-    width: fit-content;
-    height: fit-content;
-    left: 4rem;
-    bottom: 4rem;
-}
-.bottom_animation_content .go_back_bottom:hover{
+.service_bottom_content_text .bottom_less:hover{
     opacity: 1;
 }
+
+
+
 
 /*========== Start Responsive ===========*/
 /*------- max-width: 1400px  --------*/

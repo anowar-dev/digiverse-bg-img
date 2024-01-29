@@ -121,58 +121,36 @@ $(document).ready(function () {
 
   //============ Our values section animation start ==========
   // see more click
-  $(".seemore").each(function (i) {
-    const currentIndex = i;
-    const current = $(this);
+  $(".seemore").each(function () {
+    let current = $(this);
+
     current.click(() => {
-      $(".dubble_animation_single").each(function (mainIndex) {
-        const currentMain = $(this);
-        if (mainIndex > currentIndex) {
-          currentMain.addClass("translate92");
-        } else {
-          currentMain.removeClass("translate92");
-        }
-      });
-      $(".dobble_animation_main").css({ transform: "translate(0)" });
-      $(".about_dobble_inner").css({ position: "absolute" });
-      $(".about_dobble_inner").css({ transform: "translate(-100%)" });
+      current.addClass("display_none");
+      let closetParent = current.closest(".dobble_inner_text");
+      closetParent.find(".values_halfContent").addClass("display_none");
+      closetParent.find(".values_fullContent").removeClass("d-none");
+      closetParent.find(".less").addClass("display_block");
+      closetParent.addClass("width_100");
+      closetParent
+        .siblings(".dobble_inner_img")
+        .addClass("display_none");
     });
   });
 
   // Go back click
-  $(".go_back").each(function (gbackIndex) {
-    const currentBack = $(this);
-    currentBack.click(function () {
-      $(".dubble_animation_single").each(function () {
-        const curredoubleAnim = $(this);
-        if (curredoubleAnim.hasClass("translate92")) {
-          curredoubleAnim.removeClass("translate92");
-        }
-      });
-      $(".dobble_animation_main").css({ transform: "translate(100%)" });
-      $(".about_dobble_inner").css({ position: "relative" });
-      $(".about_dobble_inner").css({ transform: "translate(0)" });
-    });
-  });
+  $(".less").each(function () {
+    let current = $(this);
 
-  // Single Animation section
-  $(".dubble_animation_single").each(function (aIndex) {
-    const currentBtn = $(this);
-    currentBtn.click(function () {
-      if (currentBtn.hasClass("translate92")) {
-        $(".dubble_animation_single").each(function (index) {
-          const currentElement = $(this);
-          if (index <= aIndex) {
-            currentElement.removeClass("translate92");
-          }
-        });
-      } else {
-        $(".dubble_animation_single").each(function (laterIndex) {
-          if (aIndex < laterIndex) {
-            $(this).addClass("translate92");
-          }
-        });
-      }
+    current.click(() => {
+      current.removeClass("display_block");
+      let closetParent = current.closest(".dobble_inner_text");
+      closetParent.find(".values_fullContent").addClass("d-none");
+      closetParent.removeClass("width_100");
+      closetParent
+        .siblings(".dobble_inner_img")
+        .removeClass("display_none");
+      closetParent.find(".values_halfContent").removeClass("display_none");
+      closetParent.find(".seemore").removeClass("display_none");
     });
   });
 
@@ -180,60 +158,84 @@ $(document).ready(function () {
 
   //============ OUR SERVICES section animation start ==========
   // see more click
-  $(".bottom_seemore").each(function (i) {
-    const currentIndex = i;
+  $(".bottom_seemore").each(function () {
     const current = $(this);
+    let closetParent = current.closest(".service_bottom_content_text");
+    let halfText = closetParent.find(".services_halfText");
+    let fullText = closetParent.find(".services_fullText");
+    let lessBtn = closetParent.find(".bottom_less");
+    let imgDiv = closetParent.siblings(".service_bottom_content_img");
     current.click(() => {
-      $(".bottom_animation_single").each(function (mainIndex) {
-        const currentMain = $(this);
-        if (mainIndex > currentIndex) {
-          currentMain.addClass("translate92");
-        } else {
-          currentMain.removeClass("translate92");
-        }
+      $(".bottom_seemore").each(function (mainIndex) {
+        const currentSeemore = $(this);
+        currentSeemore.click(function(){
+          let closetParentInner = currentSeemore.closest(
+            ".service_bottom_content_text"
+          );
+          let halfTextInner = closetParentInner.find(".services_halfText");
+          let fullTextInner = closetParentInner.find(".services_fullText");
+          let lessBtnInner = closetParentInner.find(".bottom_less");
+          let imgDivInner = closetParentInner.siblings(
+            ".service_bottom_content_img"
+          );
+          if (
+            current.hasClass("display_none") &&
+            halfText.hasClass("display_none") &&
+            !fullText.hasClass("d-none")
+          ) {
+            current.removeClass("display_none");
+            halfText.removeClass("display_none");
+            fullText.addClass("d-none")
+            currentSeemore.addClass("display_none");
+            halfTextInner.addClass("display_none");
+            fullTextInner.removeClass("d-none")
+          }
+          else {
+            currentSeemore.addClass("display_none");
+            halfTextInner.addClass("display_none");
+            fullTextInner.addClass("d_none");
+          }
+        })
       });
-      $(".bottom_animation_main").css({ transform: "translate(0)" });
-      $(".about_service_bottom_inner").css({ position: "absolute" });
-      $(".about_service_bottom_inner").css({ transform: "translate(-100%)" });
     });
   });
 
   // Go back click
-  $(".go_back_bottom").each(function (gbackIndex) {
-    const currentBack = $(this);
-    currentBack.click(function () {
-      $(".bottom_animation_single").each(function () {
-        const curredoubleAnim = $(this);
-        if (curredoubleAnim.hasClass("translate92")) {
-          curredoubleAnim.removeClass("translate92");
-        }
-      });
-      $(".bottom_animation_main").css({ transform: "translate(100%)" });
-      $(".about_service_bottom_inner").css({ position: "relative" });
-      $(".about_service_bottom_inner").css({ transform: "translate(0)" });
-    });
-  });
+  // $(".go_back_bottom").each(function (gbackIndex) {
+  //   const currentBack = $(this);
+  //   currentBack.click(function () {
+  //     $(".bottom_animation_single").each(function () {
+  //       const curredoubleAnim = $(this);
+  //       if (curredoubleAnim.hasClass("translate92")) {
+  //         curredoubleAnim.removeClass("translate92");
+  //       }
+  //     });
+  //     $(".bottom_animation_main").css({ transform: "translate(100%)" });
+  //     $(".about_service_bottom_inner").css({ position: "relative" });
+  //     $(".about_service_bottom_inner").css({ transform: "translate(0)" });
+  //   });
+  // });
 
   // Single Animation section
-  $(".bottom_animation_single").each(function (aIndex) {
-    const currentBtn = $(this);
-    currentBtn.click(function () {
-      if (currentBtn.hasClass("translate92")) {
-        $(".bottom_animation_single").each(function (index) {
-          const currentElement = $(this);
-          if (index <= aIndex) {
-            currentElement.removeClass("translate92");
-          }
-        });
-      } else {
-        $(".bottom_animation_single").each(function (laterIndex) {
-          if (aIndex < laterIndex) {
-            $(this).addClass("translate92");
-          }
-        });
-      }
-    });
-  });
+  // $(".bottom_animation_single").each(function (aIndex) {
+  //   const currentBtn = $(this);
+  //   currentBtn.click(function () {
+  //     if (currentBtn.hasClass("translate92")) {
+  //       $(".bottom_animation_single").each(function (index) {
+  //         const currentElement = $(this);
+  //         if (index <= aIndex) {
+  //           currentElement.removeClass("translate92");
+  //         }
+  //       });
+  //     } else {
+  //       $(".bottom_animation_single").each(function (laterIndex) {
+  //         if (aIndex < laterIndex) {
+  //           $(this).addClass("translate92");
+  //         }
+  //       });
+  //     }
+  //   });
+  // });
 
   //============ OUR SERVICES section animation end ==========
 });
