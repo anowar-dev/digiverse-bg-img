@@ -75,8 +75,8 @@ $(document).ready(function () {
        return;
      }
 
-     if (!isTouchDevice()) {
-       // Show the custom cursor only on non-touch devices
+     if (isTouchDevice()) {
+       // Show the custom cursor only on touch devices
        cursor.css("display", "block");
      }
 
