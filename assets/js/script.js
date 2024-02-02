@@ -33,124 +33,212 @@ $(window).on("load", function () {
 
 // ===========Custom Cursor start here =============
 $(document).ready(function () {
-  const cursor = $(".cursor");
+  // const cursor = $(".cursor");
 
-  function updateScrollbar() {
-    const documentHeight = $(document).height();
-    const viewportHeight = $(window).height();
-    const documentWidth = $(document).width();
-    const viewportWidth = $(window).width();
+  // function updateScrollbar() {
+  //   const documentHeight = $(document).height();
+  //   const viewportHeight = $(window).height();
+  //   const documentWidth = $(document).width();
+  //   const viewportWidth = $(window).width();
 
-    // Check if the document height is greater than the viewport height
-    if (documentHeight > viewportHeight) {
-      $("body").css("overflow-y", "auto");
-    } else {
-      $("body").css("overflow-y", "hidden");
-    }
+  //   // Check if the document height is greater than the viewport height
+  //   if (documentHeight > viewportHeight) {
+  //     $("body").css("overflow-y", "auto");
+  //   } else {
+  //     $("body").css("overflow-y", "hidden");
+  //   }
 
-    // Check if the document width is greater than the viewport width
-    if (documentWidth > viewportWidth) {
-      $("body").css("overflow-x", "auto");
-    } else {
-      $("body").css("overflow-x", "hidden");
-    }
-  }
+  //   // Check if the document width is greater than the viewport width
+  //   if (documentWidth > viewportWidth) {
+  //     $("body").css("overflow-x", "auto");
+  //   } else {
+  //     $("body").css("overflow-x", "hidden");
+  //   }
+  // }
 
-  function updateCursorVisibility(e) {
-    const isOverInteractiveElement = $("a, button, input, textarea, select")
-      .toArray()
-      .some(function (element) {
-        const rect = element.getBoundingClientRect();
-        return (
-          e.clientX >= rect.left &&
-          e.clientX <= rect.right &&
-          e.clientY >= rect.top &&
-          e.clientY <= rect.bottom
-        );
-      });
+  // function updateCursorVisibility(e) {
+  //   const isOverInteractiveElement = $("a, button, input, textarea, select")
+  //     .toArray()
+  //     .some(function (element) {
+  //       const rect = element.getBoundingClientRect();
+  //       return (
+  //         e.clientX >= rect.left &&
+  //         e.clientX <= rect.right &&
+  //         e.clientY >= rect.top &&
+  //         e.clientY <= rect.bottom
+  //       );
+  //     });
 
-    const isOverIconElement = $(".onLoad_body .icon, .onLoad_body .icon .dot")
-      .toArray()
-      .some(function (element) {
-        const rect = element.getBoundingClientRect();
-        return (
-          e.clientX >= rect.left &&
-          e.clientX <= rect.right &&
-          e.clientY >= rect.top &&
-          e.clientY <= rect.bottom
-        );
-      });
+  //   const isOverIconElement = $(".onLoad_body .icon, .onLoad_body .icon .dot")
+  //     .toArray()
+  //     .some(function (element) {
+  //       const rect = element.getBoundingClientRect();
+  //       return (
+  //         e.clientX >= rect.left &&
+  //         e.clientX <= rect.right &&
+  //         e.clientY >= rect.top &&
+  //         e.clientY <= rect.bottom
+  //       );
+  //     });
 
-    if (isOverInteractiveElement || isOverIconElement) {
-      cursor.css("display", "none");
-    } else {
-      cursor.css("display", "block");
-    }
-  }
+  //   if (isOverInteractiveElement || isOverIconElement) {
+  //     cursor.css("display", "none");
+  //   } else {
+  //     cursor.css("display", "block");
+  //   }
+  // }
 
-  // Initial update when the page loads
-  updateScrollbar();
+  // // Initial update when the page loads
+  // updateScrollbar();
 
-  $(document).mousemove(function (e) {
-    const scrollX = window.pageXOffset || document.documentElement.scrollLeft;
-    const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+  // $(document).mousemove(function (e) {
+  //   const scrollX = window.pageXOffset || document.documentElement.scrollLeft;
+  //   const scrollY = window.pageYOffset || document.documentElement.scrollTop;
 
-    cursor.css({
-      left: e.clientX + scrollX + "px",
-      top: e.clientY + scrollY + "px",
-    });
+  //   cursor.css({
+  //     left: e.clientX + scrollX + "px",
+  //     top: e.clientY + scrollY + "px",
+  //   });
 
-    updateCursorVisibility(e);
-  });
+  //   updateCursorVisibility(e);
+  // });
 
-  $(document).scroll(function () {
-    updateCursorVisibility(); // Update cursor visibility on scroll
-    updateScrollbar(); // Update scrollbar on scroll
-  });
+  // $(document).scroll(function () {
+  //   updateCursorVisibility(); // Update cursor visibility on scroll
+  //   updateScrollbar(); // Update scrollbar on scroll
+  // });
 
-  $(document).mouseout(function () {
-    cursor.css("display", "none");
-  });
+  // $(document).mouseout(function () {
+  //   cursor.css("display", "none");
+  // });
 
-  // Update scrollbar and cursor visibility on window resize
-  $(window).resize(function () {
-    updateCursorVisibility();
-    updateScrollbar();
-  });
+  // // Update scrollbar and cursor visibility on window resize
+  // $(window).resize(function () {
+  //   updateCursorVisibility();
+  //   updateScrollbar();
+  // });
   //=============== Custom Cursor end here ==========
 
   //============ Our values section animation start ==========
-  // see more click
-  // $(".seemore").each(function () {
-  //   let current = $(this);
-
-  //   current.click(() => {
-  //     current.addClass("display_none");
-  //     let closetParent = current.closest(".dobble_inner_text");
-  //     closetParent.find(".values_halfContent").addClass("display_none");
-  //     closetParent.find(".values_fullContent").removeClass("d-none");
-  //     closetParent.find(".less").addClass("display_block");
-  //     closetParent.addClass("width_100");
-  //     closetParent.siblings(".dobble_inner_img").addClass("display_none");
-  //   });
-  // });
-
-  // // Go back click
-  // $(".less").each(function () {
-  //   let current = $(this);
-
-  //   current.click(() => {
-  //     current.removeClass("display_block");
-  //     let closetParent = current.closest(".dobble_inner_text");
-  //     closetParent.find(".values_fullContent").addClass("d-none");
-  //     closetParent.removeClass("width_100");
-  //     closetParent.siblings(".dobble_inner_img").removeClass("display_none");
-  //     closetParent.find(".values_halfContent").removeClass("display_none");
-  //     closetParent.find(".seemore").removeClass("display_none");
-  //   });
-  // });
 
   // see more click
+const cursor = $(".cursor");
+let rightClickFlag = false; // Flag to track right mouse button click
+
+function updateScrollbar() {
+  const documentHeight = $(document).height();
+  const viewportHeight = $(window).height();
+  const documentWidth = $(document).width();
+  const viewportWidth = $(window).width();
+
+  // Check if the document height is greater than the viewport height
+  if (documentHeight > viewportHeight) {
+    $("body").css("overflow-y", "auto");
+  } else {
+    $("body").css("overflow-y", "hidden");
+  }
+
+  // Check if the document width is greater than the viewport width
+  if (documentWidth > viewportWidth) {
+    $("body").css("overflow-x", "auto");
+  } else {
+    $("body").css("overflow-x", "hidden");
+  }
+}
+
+function updateCursorVisibility(e) {
+  if (rightClickFlag) {
+    cursor.css("display", "none");
+    // Reset the flag after a delay (e.g., 1000 milliseconds)
+    setTimeout(function () {
+      rightClickFlag = false;
+    }, 1000);
+    return;
+  }
+
+  const isRightClick = e && e.which === 3; // Check for right mouse button click
+  if (isRightClick) {
+    rightClickFlag = true;
+    cursor.css("display", "none");
+    // Reset the flag after a delay (e.g., 1000 milliseconds)
+    setTimeout(function () {
+      rightClickFlag = false;
+    }, 1000);
+    return;
+  }
+
+  const isOverInteractiveElement = $("a, button, input, textarea, select")
+    .toArray()
+    .some(function (element) {
+      const rect = element.getBoundingClientRect();
+      return (
+        e.clientX >= rect.left &&
+        e.clientX <= rect.right &&
+        e.clientY >= rect.top &&
+        e.clientY <= rect.bottom
+      );
+    });
+
+  const isOverIconElement = $(".onLoad_body .icon, .onLoad_body .icon .dot")
+    .toArray()
+    .some(function (element) {
+      const rect = element.getBoundingClientRect();
+      return (
+        e.clientX >= rect.left &&
+        e.clientX <= rect.right &&
+        e.clientY >= rect.top &&
+        e.clientY <= rect.bottom
+      );
+    });
+
+  if (isOverInteractiveElement || isOverIconElement) {
+    cursor.css("display", "none");
+  } else {
+    cursor.css("display", "block");
+  }
+}
+
+// Initial update when the page loads
+updateScrollbar();
+
+$(document).mousemove(function (e) {
+  const scrollX = window.pageXOffset || document.documentElement.scrollLeft;
+  const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+
+  cursor.css({
+    left: e.clientX + scrollX + "px",
+    top: e.clientY + scrollY + "px",
+  });
+
+  updateCursorVisibility(e);
+});
+
+$(document).scroll(function () {
+  updateCursorVisibility(); // Update cursor visibility on scroll
+  updateScrollbar(); // Update scrollbar on scroll
+});
+
+$(document).mousedown(function (e) {
+  if (e.which === 3) {
+    // Right mouse button clicked
+    rightClickFlag = true;
+    cursor.css("display", "none");
+    // Reset the flag after a delay (e.g., 1000 milliseconds)
+    setTimeout(function () {
+      rightClickFlag = false;
+    }, 1000);
+  }
+});
+
+$(document).mouseout(function () {
+  cursor.css("display", "none");
+});
+
+// Update scrollbar and cursor visibility on window resize
+$(window).resize(function () {
+  updateCursorVisibility();
+  updateScrollbar();
+});
 
   $(".seemore").each(function (seeMoreIndex) {
     const currentSeeMore = $(this);
