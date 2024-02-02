@@ -1151,9 +1151,9 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 }
 .dobble_inner_text{
     width: 50%;
+    height: 350px;
+    min-height: 100%;
     background: rgb(0, 0, 0, .7);
-    transition: all .3s;
-    height: 100%;
     overflow: hidden;
     padding: 2rem;
     transition: all .5s;
@@ -1205,6 +1205,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 }
 .width_100{
     width: 100%;
+    height: fit-content;
 }
 
 
@@ -1260,7 +1261,8 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 .service_bottom_content_text{
     width: 50%;
     overflow: hidden;
-    height: 100%;
+    height: 350px;
+    min-height: 100%;
     padding: 2rem;
     background: rgba(0, 0, 0, .7);
     transition: .5s;
@@ -1322,6 +1324,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 .bottom_width{
     width: 100%;
     transition: all .5s;
+    height: fit-content;
 }
 .bbg_blue{
     background: #1A2D5A;
@@ -1390,9 +1393,6 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     .about_service_bottom_content .service_bottom_content_img{
         display: none;
     }
-    .service_bottom_content_text{
-        min-height: 450px;
-    }
     .about_dabble_section .about_dobble_inner{
         grid-template-columns: auto;
         grid-column: span 2;
@@ -1402,12 +1402,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
         min-height: 450px;
         border-bottom: 1px solid #ffffff;
     }
-    .dobble_inner_text{
-        width: 100%;
-        height: fit-content;
-        min-height: 450px;
-        border-top: 1px solid #ffffff;
-    }
+    
     .about_dobble_inner .dobble_inner_content{
         min-height: 450px;
     }

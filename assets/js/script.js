@@ -69,9 +69,8 @@ $(document).ready(function () {
 
     const isTouchDevice =
       "ontouchstart" in window || navigator.maxTouchPoints > 0;
-    const isTouch = isTouchDevice && e && e.type === "touchstart";
 
-    if (isTouch) {
+    if (isTouchDevice && e && e.type === "touchstart") {
       cursor.css("display", "none");
       return;
     }
@@ -153,7 +152,9 @@ $(document).ready(function () {
     updateCursorVisibility();
     updateScrollbar();
   });
+
   //=============== Custom Cursor end here ==========
+  
 
   //============ Our values section animation start ==========
 
@@ -165,8 +166,10 @@ $(document).ready(function () {
       $(".seemore").each(function (newSeeMoreIndex) {
         const newSeeMoreBtn = $(this);
         if (seeMoreIndex != newSeeMoreIndex) {
+          
           const newClosetParentInner =
             newSeeMoreBtn.closest(".dobble_inner_text");
+
           const newHalfTextInner = newClosetParentInner.find(
             ".values_halfContent"
           );
