@@ -57,6 +57,14 @@ $(document).ready(function () {
      }
    }
 
+   function isTouchDevice() {
+     return (
+       "ontouchstart" in window ||
+       navigator.maxTouchPoints > 0 ||
+       navigator.msMaxTouchPoints > 0
+     );
+   }
+
    function updateCursorVisibility(e) {
      if (rightClickFlag) {
        cursor.css("display", "none");
@@ -67,10 +75,7 @@ $(document).ready(function () {
        return;
      }
 
-     const isTouchDevice =
-       "ontouchstart" in window || navigator.maxTouchPoints > 0;
-
-     if (!isTouchDevice) {
+     if (!isTouchDevice()) {
        // Show the custom cursor only on non-touch devices
        cursor.css("display", "block");
      }
