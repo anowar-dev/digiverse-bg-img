@@ -1034,7 +1034,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 .ai_content .about_text_div_ai{
     position: absolute;
     width: 90%;
-    max-width: 1024px;
+    max-width: 1100px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -1070,7 +1070,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 }
 .content_4th .text_div_4th{
     width: 90%;
-    max-width: 1024px;
+    max-width: 1100px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1122,23 +1122,23 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     margin-right: auto;
 }
 /* Dubble row */
-.about_dabble_section .about_dobble_inner{
-    position: relative;
+.about_dobble_inner{
     display: grid;
     grid-template-columns: auto auto;
-    transition: all .7s;
-    min-height: fit-content;
+    transition: all .4s;
 }
-.about_dabble_section .about_dobble_inner > :last-child {
+.about_dabble_section .about_dobble_inner .win_box{
     grid-column: span 2;
     height: fit-content;
+    min-height: 350px;
+    position: relative;
 }
 
 .about_dobble_inner .dobble_inner_content{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 350px;
     min-height: fit-content;
     position: relative;
 }
@@ -1157,7 +1157,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     background: rgb(0, 0, 0, .7);
     overflow: hidden;
     padding: 2rem;
-    transition: all .5s;
+    transition: all .4s;
 }
 
 .dobble_inner_text .seemore, .less{
@@ -1170,7 +1170,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     padding-left: 0;
     text-transform: uppercase;
     opacity: .6;
-    transition: all.3s;
+    transition: all.4s;
 }
 
 .dobble_inner_text .seemore:hover{
@@ -1240,14 +1240,13 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 .about_service_bottom .about_service_bottom_inner{
     display: grid;
     grid-template-columns: auto auto;
-    transition: .7s;
-    min-height: 550px;
+    transition: .4s;
 }
 .about_service_bottom_inner .about_service_bottom_content{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: fit-content;
+    height: 350px;
     position: relative;
 }
 .about_service_bottom_content img{
@@ -1266,7 +1265,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     min-height: 100%;
     padding: 2rem;
     background: rgba(0, 0, 0, .7);
-    transition: .5s;
+    transition: .4s;
 }
 .service_bottom_content_text .about_title{
     font-size: 1.4rem;
@@ -1284,8 +1283,8 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 .about_finished{
     margin-top: 5rem;
     margin-bottom: 5rem;
-    text-align: right;
-    width: 94%;
+    text-align: center;
+    width: 95%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -1296,7 +1295,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 }
 .about_finished .finished_para a{
     text-decoration: none;
-    transition: all .3s;
+    transition: all .4s;
     opacity: .5;
     color: #ffffff;
 }
@@ -1313,7 +1312,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     padding-left: 0;
     text-transform: uppercase;
     opacity: .6;
-    transition: all.3s;
+    transition: all.4s;
 }
 
 .service_bottom_content_text .bottom_seemore:hover{
@@ -1324,7 +1323,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 }
 .bottom_width{
     width: 100%;
-    transition: all .5s;
+    transition: all .4s;
     height: fit-content;
 }
 .bbg_blue{
@@ -1333,8 +1332,41 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 
 
 /*========== Start Responsive ===========*/
-/*------- max-width: 1400px  --------*/
-
+/*------- max-width: 1200px  --------*/
+@media (max-width: 1200px) {
+    .about_dobble_inner .dobble_inner_content{
+        height: 380px;
+    }
+    .dobble_inner_text{
+        height: 380px;
+    }
+    .about_dabble_section .about_dobble_inner .win_box{
+        height: 380px;
+    }
+    .service_bottom_content_text{
+        height: 380px;
+    }
+    .about_service_bottom_inner .about_service_bottom_content{
+        height: 380px;
+    }
+}
+@media (max-width: 1100px) {
+    .about_dobble_inner .dobble_inner_content{
+        height: 400px;
+    }
+    .dobble_inner_text{
+        height: 400px;
+    }
+    .about_dabble_section .about_dobble_inner .win_box{
+        height: 400px;
+    }
+    .service_bottom_content_text{
+        height: 400px;
+    }
+    .about_service_bottom_inner .about_service_bottom_content{
+        height: 400px;
+    }
+}
 /*------- max-width: 1024px  --------*/
 @media (max-width: 1024px) {
     .social .social_inner a i{
@@ -1342,6 +1374,21 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
         width: 1.7rem !important;
         height: 1.7rem !important;
         line-height: 1.7rem !important;
+    }
+    .about_dobble_inner .dobble_inner_content{
+        height: 420px;
+    }
+    .dobble_inner_text{
+        height: 420px;
+    }
+    .about_dabble_section .about_dobble_inner .win_box{
+        height: 420px;
+    }
+    .service_bottom_content_text{
+        height: 420px;
+    }
+    .about_service_bottom_inner .about_service_bottom_content{
+        height: 420px;
     }
 }
 
@@ -1377,12 +1424,11 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     .about_service_bottom .about_service_bottom_inner{
         grid-template-columns: auto;
     }
+    
     .service_bottom_content_text{
         width: 100%;
-        min-height: 420px;
         background: rgba(0, 0, 0, .8);
         border-top: 1px solid #ffffff;
-        height: unset;
     }
     .services_halfText{
         display: none;
@@ -1396,14 +1442,18 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     .about_service_bottom_content .service_bottom_content_img{
         display: none;
     }
-    .about_dabble_section .about_dobble_inner{
-        grid-template-columns: auto;
-        grid-column: span 2;
+    .about_dobble_inner{
+       grid-template-columns: 1fr;
+        
     }
-    .about_dabble_section .about_dobble_inner > :last-child{
-        grid-column: unset;
+    .about_dobble_inner > * {
+       grid-column: 1 / -1
+        
     }
     
+    .about_dabble_section .about_dobble_inner .win_box{
+        height: unset;
+    }
     .dobble_inner_content .dobble_inner_img{
         display: none;
     }
@@ -1413,7 +1463,9 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     .dobble_inner_text{
         width: 100%;
         border-bottom: 1px solid #ffffff;
-        min-height: 420px;
+        height: unset;
+    }
+    .dobble_inner_text.win_together{
         height: fit-content;
     }
     .dobble_inner_text:first-child{
@@ -1425,6 +1477,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     .values_fullContent{
         display: block !important;
     }
+    
 }
 
 
@@ -1434,11 +1487,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     .about_main .about_full_width.top{
         max-height: 600px;
     }
-    .service_bottom_content_text{
-        min-height: 500px;
-    }
     .dobble_inner_text{
-        min-height: 500px;
         height: fit-content;
     }
 }
@@ -1697,11 +1746,8 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     .indu_full_width_inner .about_bg_full_small{
         min-height: 370px;
     }
-    .service_bottom_content_text{
-        min-height: 550px;
-    }
+
     .dobble_inner_text{
-        min-height: 550px;
         height: fit-content;
     }
 
@@ -1768,11 +1814,8 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     .dobble_inner_text{
         padding: 2rem 1rem;
     }
-    .service_bottom_content_text{
-        min-height: 600px;
-    }
-    .dobble_inner_text{
-        min-height: 600px;
+    
+    .about_dobble_inner .dobble_inner_content{
         height: fit-content;
     }
 }
